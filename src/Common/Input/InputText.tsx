@@ -1,7 +1,7 @@
-import { InputLabel, TextField } from "@mui/material";
-
+import { TextField, Typography } from "@mui/material";
+import React, { useEffect, useRef } from "react";
 import { Controller } from "react-hook-form";
-import '../../Assests/styles.scss';
+import "../../Assests/styles.scss";
 
 interface LayoutProps {
   control: any;
@@ -10,9 +10,8 @@ interface LayoutProps {
   className?: any;
   type?: any;
   error?: any;
-  label?:any;
-  labelStyle?: React.CSSProperties
- 
+  label?: any;
+  labelStyle?: React.CSSProperties;
 }
 
 const InputText = ({
@@ -23,8 +22,17 @@ const InputText = ({
   type,
   error,
   label,
-  labelStyle
+  labelStyle,
 }: LayoutProps) => {
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  // Use useEffect to focus on the input field when an error occurs
+  useEffect(() => {
+    if (error && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [error]);
+
   return (
     <Controller
       control={control}
@@ -32,31 +40,35 @@ const InputText = ({
       defaultValue={defaultValue}
       render={({ field }) => (
         <>
-        <TextField
-          {...field}
-          sx={{
-            // '& .MuiInputBase-root.MuiFilledInput-root': {
-            //   backgroundColor: 'lightblue',
-            //   borderRadius: '8px',
-            // },
-            '& .MuiInputBase-root.MuiFilledInput-underline:before': {
-              borderBottom: '2px solid white', 
-            },
-            '& .MuiInputBase-root.MuiFilledInput-underline:after': {
-              borderBottom: '2px solid white',
-            },
-          }}
-          className={className}
-          type={type}
-          variant="filled"
-          InputLabelProps={{
-            style: labelStyle,
-          }}
-          label={label}
-          error={!!error} 
-          helperText={error?.message || ""} 
-
-        />
+          <TextField
+            {...field}
+            inputRef={inputRef} // Assign the ref to the input field
+            sx={{
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "white", // Override the border color
+                },
+                "&:hover fieldset": {
+                  borderColor: "white", // Override the border color on hover
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "white", // Override the border color on focus
+                  outline: "none", // Remove the blue outline
+                },
+              },
+            }}
+            className={className}
+            type={type}
+            variant="outlined"
+            InputLabelProps={{
+              style: labelStyle,
+            }}
+    
+            label={label}
+            error={!!error}
+            helperText={error?.message || ""}
+          />
+   {/* {inputRef&&error.message} */}
         </>
       )}
     />

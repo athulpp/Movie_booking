@@ -1,12 +1,12 @@
 [
     {
       "id": 1,
-      "email": "john@gamil.com",
+      "email": "john@gmail.com",
       "password": "password123"
     },
     {
       "id": 2,
-      "email": "jane@gamil.com",
+      "email": "jane@gmail.com",
       "password": "securepass456"
     },
     {
@@ -16,8 +16,10 @@
     },
     {
       "id": 4,
-      "email": "alice@gamil.com",
+      "email": "alice@gmail.com",
       "password": "letmein789"
     }
   ]
+  
+
   
