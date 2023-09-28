@@ -1,15 +1,18 @@
-import { TextField } from "@mui/material";
-import React, { useRef, useEffect } from "react";
+import { InputLabel, TextField } from "@mui/material";
+
 import { Controller } from "react-hook-form";
 import '../../Assests/styles.scss';
 
 interface LayoutProps {
-  control?: any;
+  control: any;
   defaultValue?: any;
   name?: any;
   className?: any;
   type?: any;
   error?: any;
+  label?:any;
+  labelStyle?: React.CSSProperties
+ 
 }
 
 const InputText = ({
@@ -19,29 +22,44 @@ const InputText = ({
   className,
   type,
   error,
+  label,
+  labelStyle
 }: LayoutProps) => {
-  const inputRef = useRef<HTMLInputElement | null>(null);
-  useEffect(() => {
-    if (error && inputRef.current) {
-      inputRef.current?.focus();
-    }
-  }, [error]);
   return (
-    <>
-      <Controller
-        control={control}
-        defaultValue={defaultValue}
-        name={name}
-        render={({ field }) => (
-          <>
-           <TextField
-           className="input_textField"
-           {...field}
-           />
-          </>
-        )}
-      />
-    </>
+    <Controller
+      control={control}
+      name={name}
+      defaultValue={defaultValue}
+      render={({ field }) => (
+        <>
+        <TextField
+          {...field}
+          sx={{
+            // '& .MuiInputBase-root.MuiFilledInput-root': {
+            //   backgroundColor: 'lightblue',
+            //   borderRadius: '8px',
+            // },
+            '& .MuiInputBase-root.MuiFilledInput-underline:before': {
+              borderBottom: '2px solid white', 
+            },
+            '& .MuiInputBase-root.MuiFilledInput-underline:after': {
+              borderBottom: '2px solid white',
+            },
+          }}
+          className={className}
+          type={type}
+          variant="filled"
+          InputLabelProps={{
+            style: labelStyle,
+          }}
+          label={label}
+          error={!!error} 
+          helperText={error?.message || ""} 
+
+        />
+        </>
+      )}
+    />
   );
 };
 

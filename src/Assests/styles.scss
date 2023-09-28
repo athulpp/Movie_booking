@@ -1,5 +1,46 @@
 .input_textField{
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;   
+    input {
+        border: 2px solid #ffffff !important;
+        border-radius: 4px !important;
+        padding: 5px !important;
+        color: white;
+        width: 18rem;
+ 
+
+      } 
+   
+
 }
+
+
+
+
+::selection {
+    background: transparent !important;
+    color: inherit!important;
+  }
+
+.input_textField::selection {
+    input{
+      
+        color: black !important;
+    }
+
+  
+  }
+
+.labelStyle {
+    color: blue; /* Text color */
+    font-size: 10px; /* Font size */
+    font-weight: bold; /* Font weight (optional) */
+    /* Add more styles as needed */
+  }
+
+  .content-row{
+    display: flex;
+    padding-left: 2rem;
+  }
+
+  .content-height{
+    height: 1.5rem;
+  }
