@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "email": "john@gamil.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "email": "jane@gamil.com",
+      "password": "securepass456"
+    },
+    {
+      "id": 3,
+      "email": "bob@gmail.com",
+      "password": "mysecretpwd"
+    },
+    {
+      "id": 4,
+      "email": "alice@gamil.com",
+      "password": "letmein789"
+    }
+  ]
+  
