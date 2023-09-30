@@ -1,0 +1,93 @@
+
+    [
+        {
+          "id": 1,
+          "name": "Savitha Film City",
+          "address": "Padannapalam, Kannur, Kerala 670014",
+          "contact_number": "98538-24567",
+          "films": [
+            {
+              "id": 1,
+              "title": "The Lion King",
+              "image": "https://assets.titleleaf.com/abdopub/product/cover/xl_9781532145407_fc.jpg",
+              "seats": [
+                {
+                  "id": 1,
+                  "seatNumber": "A1",
+                  "status": "available"
+                },
+                {
+                  "id": 2,
+                  "seatNumber": "A2",
+                  "status": "available"
+                },
+                {
+                  "id": 3,
+                  "seatNumber": "A3",
+                  "status": "available"
+                },
+                {
+                    "id":4,
+                    "seatNumber":"A4",
+                    "status":"available"
+                },
+                {
+                    "id":5,
+                    "seatNumber":"A5",
+                    "status":"available"
+                },
+                {
+                    "id":6,
+                    "seatNumber":"A6",
+                    "status":"available"
+                },
+                {
+                    "id":7,
+                    "seatNumber":"A7",
+                    "status":"available"
+                },
+                {
+                    "id":8,
+                    "seatNumber":"A8",
+                    "status":"available"
+                },
+                {
+                    "id":9,
+                    "seatNumber":"A9",
+                    "status":"available"
+                },
+                {
+                    "id":10,
+                    "seatNumber":"A10",
+                    "status":"available"
+                }
+
+               
+              ]
+            },
+            {
+              "id": 2,
+              "title": "Iron Man 1",
+              "image": "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/1/1d/Iron_Man_Poster.PNG/revision/latest?cb=20191111195718&path-prefix=de",
+              "seats": [
+                {
+                  "id": 1,
+                  "seatNumber": "B1",
+                  "status": "available"
+                },
+                {
+                  "id": 2,
+                  "seatNumber": "B2",
+                  "status": "available"
+                },
+                {
+                  "id": 3,
+                  "seatNumber": "B3",
+                  "status": "available"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      

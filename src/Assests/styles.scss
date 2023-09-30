@@ -12,9 +12,6 @@
 
 }
 
-
-
-
 ::selection {
     background: transparent !important;
     color: inherit!important;
@@ -48,11 +45,54 @@
 .font-anton{
     font-family: 'Anton', sans-serif!important;
     font-size:5rem !important;
-    background-color:#301008;
+    // background-color:#301008;
     color:white;
     margin: auto !important;
     text-align: center !important;
     padding-left: 2%;
     display: block !important;
-  
+    transition: transform 0.3s ease-in-out !important;
 }
+
+.font-anton:hover {
+    transform: scale(1.1); /* Example: Enlarge the text on hover */
+  }
+
+  .font_ShopName{
+    font-family: 'Pixelify Sans', cursive !important;
+    font-size: 3rem !important;
+    color: #FFCC00;
+    text-align: center;
+  }
+
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel-content {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+  
+  .active {
+    border: 2px solid #333; /* Add your active slide styling here */
+  }
+  
+ 
+  

@@ -5,10 +5,15 @@ import InputText from "../../Common/Input/InputText";
 import { useForm } from "react-hook-form";
 import ButtonComp from "../../Common/Input/Button";
 import memberData from '../../Jsons/member.json';
-
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
 import movie1 from '../../Assests/image/3I9xJ0Mrmv.gif'
+import { loginUser, setFormData } from "../../Redux/actions";
 const Login = () => {
-
+  const userIsLoggedIn = useSelector((state:any) => state?.userReducer.userIsLoggedIn);
+  console.log(userIsLoggedIn,'hhhhh')
+  const dispatch = useDispatch();
+const navigate=useNavigate();
   const {
     control,
     formState: { errors },
@@ -38,6 +43,17 @@ const Login = () => {
     
     // Correctly access the form input values
     const user = memberData.find((member) => member.email === value.username && member.password === value.password);
+    console.log(user,'user is here');
+    if(user){
+      dispatch(loginUser());
+      // user.isLogged = true;
+      // console.log('eeeeeeeee')
+      // sessionStorage.setItem('Email',value.username);
+      // sessionStorage.setItem('Password',value.password);
+      navigate('/home');
+      dispatch(setFormData('user',user));
+    }
+    
   
   };
 
@@ -56,11 +72,14 @@ const Login = () => {
           height='200px'
           />
         </Box>
+        <Box>
+          <Typography className="font_ShopName">Cinema Gate</Typography>
+        </Box>
       </Grid>
       {/* Right side */}
       <Grid item xs={12} md={6}>
-        <Box className="" sx={{
-          backgroundColor: "#c7ddcc",
+        <Box className="login_background" sx={{
+          // backgroundColor: "#c7ddcc",
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",

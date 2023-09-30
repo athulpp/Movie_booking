@@ -1,25 +1,25 @@
 [
     {
       "id": 1,
-      "email": "john@gmail.com",
-      "password": "password123"
+      "email": "maneesh@nivid.co",
+      "name":"Maneesh",
+      "password": "password",
+      "isLogged":false
     },
     {
       "id": 2,
-      "email": "jane@gmail.com",
-      "password": "securepass456"
+      "email": "neethu@nivid.co",
+      "name":"Neethu",
+      "password": "password",
+      "isLogged":false
     },
     {
       "id": 3,
-      "email": "bob@gmail.com",
-      "password": "mysecretpwd"
-    },
-    {
-      "id": 4,
-      "email": "alice@gmail.com",
-      "password": "letmein789"
+      "email": "remitha@nivid.co",
+      "name":"Remitha",
+      "password": "password",
+      "isLogged":false
     }
+    
   ]
-  
-
   
