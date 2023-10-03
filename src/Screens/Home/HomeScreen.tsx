@@ -1,11 +1,11 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import Header from '../../Common/Header';
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import CustomCarousel from '../../Common/AdvertismentCarousal';
-import { Grid } from '@mui/material';
+import { Grid, Paper, Typography } from '@mui/material';
 import adv1 from '../../Assests/image/ad_image/slug-navratri-collection-202309251241.jpg';
-
+import theaterData from '../../Jsons/theater.json';
 const HomeScreen = () => {
   const userIsLoggedIn = useSelector((state:any) => state?.userReducer.userIsLoggedIn);
 
@@ -16,6 +16,13 @@ if(!userIsLoggedIn){
   navigate('/');
 }
   },[])
+
+
+  const onClickMovie=(data:any)=>{
+console.log(data,'selected film');
+
+  }
+
 
   return (
     <div><Header/>
@@ -37,8 +44,42 @@ if(!userIsLoggedIn){
     />
     <Grid xs={1}></Grid>
   </Grid>
-  {/* film list mapping going to implement here */}
 </Grid>
+<Grid className='content-height'></Grid>
+{theaterData.map((item) => (
+        <div 
+        key={item.id}>
+          <Typography variant="h5" align="center">
+            {item.name}
+          </Typography>
+          <div
+         className='wrapper'
+        
+          >
+            {item.films.map((film:any) => (
+              <div  className='select' >
+              <div onClick={()=>onClickMovie(film)}>
+              <img
+              className='item'
+                key={film.id}
+                src={film.image}
+                alt={film.title}
+              />
+
+
+              </div>
+              <Grid className='content-row_withoutPad space_between'>
+              <Typography variant='h6'>{film.title}</Typography>
+              <Typography className='font-grey' >{film.rating}</Typography>
+              </Grid>
+              </div>
+            ))}
+          </div>
+          
+        </div>
+      ))}
+<Grid className='content-height'></Grid>
+
 
     </div>
   )
