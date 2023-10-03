@@ -41,7 +41,9 @@
   .content-height{
     height: 1.5rem;
   }
-
+.content-left-padding{
+    margin-left: 1.0rem !important;
+}
 .font-anton{
     font-family: 'Anton', sans-serif!important;
     font-size:5rem !important;
@@ -63,12 +65,12 @@
     font-size: 3rem !important;
     color: #FFCC00;
     text-align: center;
+    justify-content: center !important;
   }
 
-  .carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* CustomCarousel.css */
+
+.carousel-container {
     overflow: hidden;
     width: 100%;
   }
@@ -91,8 +93,16 @@
   }
   
   .active {
-    border: 2px solid #333; /* Add your active slide styling here */
+    border: 2px solid #333;
   }
+  
+  /* Set the maximum height for the images */
+  .carousel-slide img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
   
  
   

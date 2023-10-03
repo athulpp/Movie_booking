@@ -46,10 +46,6 @@ const navigate=useNavigate();
     console.log(user,'user is here');
     if(user){
       dispatch(loginUser());
-      // user.isLogged = true;
-      // console.log('eeeeeeeee')
-      // sessionStorage.setItem('Email',value.username);
-      // sessionStorage.setItem('Password',value.password);
       navigate('/home');
       dispatch(setFormData('user',user));
     }

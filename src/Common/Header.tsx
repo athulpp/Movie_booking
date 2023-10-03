@@ -22,7 +22,8 @@ const Logout=()=>{
         height={50}
         src={movieLogo}
         />
-        <Typography variant='h5'>{`Hello ${' '} ${userDetails.name}`}</Typography>
+        <Typography className='font_ShopName' variant='h5'>Cinema Gate</Typography>
+        <Typography className='content-left-padding' variant='h5' >{`Hello ${' '} ${userDetails.name}`}</Typography>
         <Typography variant="h6"
             component="div" sx={{ flexGrow: 1 }}>
         </Typography>
