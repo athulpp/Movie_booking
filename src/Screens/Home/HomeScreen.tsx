@@ -6,6 +6,7 @@ import CustomCarousel from '../../Common/AdvertismentCarousal';
 import { Grid, Paper, Typography } from '@mui/material';
 import adv1 from '../../Assests/image/ad_image/slug-navratri-collection-202309251241.jpg';
 import theaterData from '../../Jsons/theater.json';
+import Footer from '../../Common/Footer';
 const HomeScreen = () => {
   const userIsLoggedIn = useSelector((state:any) => state?.userReducer.userIsLoggedIn);
 
@@ -25,11 +26,12 @@ console.log(data,'selected film');
 
 
   return (
-    <div><Header/>
+    <div style={{backgroundColor:'#ECF2FF'}}><Header/>
     <Grid className='content-height'></Grid>
    <CustomCarousel/>
 <Grid className='content-height'></Grid>
-<Grid container xs={12}>
+<Grid >
+<Grid container  xs={12}>
   <Grid item xs={12} md={12} sm={12} className='content-row'>
     <Grid xs={1}></Grid>
     <img
@@ -64,13 +66,14 @@ console.log(data,'selected film');
                 key={film.id}
                 src={film.image}
                 alt={film.title}
+              style={{borderRadius:"40px"}}
               />
 
 
               </div>
               <Grid className='content-row_withoutPad space_between'>
               <Typography variant='h6'>{film.title}</Typography>
-              <Typography className='font-grey' >{film.rating}</Typography>
+              <Typography className='font-golden' >{film.rating}</Typography>
               </Grid>
               </div>
             ))}
@@ -78,9 +81,10 @@ console.log(data,'selected film');
           
         </div>
       ))}
+      </Grid>
 <Grid className='content-height'></Grid>
 
-
+<Footer/>
     </div>
   )
 }
