@@ -6,7 +6,7 @@ const Footer = () => {
 
 
   return (
-    <AppBar position="static" className={'footer'}>
+    <AppBar  position="static" className='footer'>
       <Container>
         <Toolbar>
             <Grid className='content-row'>

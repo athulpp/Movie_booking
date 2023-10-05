@@ -7,7 +7,10 @@ import { Grid, Paper, Typography } from '@mui/material';
 import adv1 from '../../Assests/image/ad_image/slug-navratri-collection-202309251241.jpg';
 import theaterData from '../../Jsons/theater.json';
 import Footer from '../../Common/Footer';
+import { setFormData } from '../../Redux/actions';
+
 const HomeScreen = () => {
+  const dispatch = useDispatch();
   const userIsLoggedIn = useSelector((state:any) => state?.userReducer.userIsLoggedIn);
 
   console.log(userIsLoggedIn,'hyyyyyhhh') 
@@ -21,6 +24,8 @@ if(!userIsLoggedIn){
 
   const onClickMovie=(data:any)=>{
 console.log(data,'selected film');
+dispatch(setFormData('movie',data));
+navigate('/moviedes',{state:data});
 
   }
 

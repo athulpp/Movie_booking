@@ -43,7 +43,6 @@ height:'300px',
           <div
             style={{
               display: 'flex',
-            
               width: `${images.length * 90}%`,
               transform: `translateX(-${currentIndex * (100 / images.length)}%)`,
               transition: 'transform 0.5s ease-in-out',
@@ -53,7 +52,6 @@ height:'300px',
               <div
                 key={index}
                 style={{
-                
                     // paddingLeft:"20px",
                   flex: `0 0 ${100 / images.length}%`,
                   scrollSnapAlign: 'start',
