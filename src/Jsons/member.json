@@ -3,22 +3,22 @@
       "id": 1,
       "email": "maneesh@nivid.co",
       "name":"Maneesh",
-      "password": "password",
-      "isLogged":false
+      "password": "password"
+     
     },
     {
       "id": 2,
       "email": "neethu@nivid.co",
       "name":"Neethu",
-      "password": "password",
-      "isLogged":false
+      "password": "password"
+  
     },
     {
       "id": 3,
       "email": "remitha@nivid.co",
       "name":"Remitha",
-      "password": "password",
-      "isLogged":false
+      "password": "password"
+
     }
     
   ]

@@ -2,6 +2,7 @@
 import { createStore, combineReducers } from 'redux';
 import userReducer from './userReducer';
 import formReducer from './formReducer';
+import arrayReducer from './arrayReducer';
 
 // Define your initial state and reducers
 const initialState = {
@@ -10,7 +11,7 @@ const initialState = {
     },
 }
 const rootReducer = combineReducers({
-  userReducer:userReducer,form:formReducer
+  userReducer:userReducer,form:formReducer,bookedList:arrayReducer
 });
 
 // Create the Redux store

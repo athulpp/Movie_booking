@@ -9,7 +9,8 @@
 }
 
 .booking_margin_seats{
-    margin-left: 2rem !important;
+    // padding-left: 5rem !important;
+     margin-left: 2rem !important;
     // margin-right: 2rem !important;
     margin-top: 2rem !important;  
     // align-items: center !important;
@@ -47,3 +48,10 @@
      background-color: white;
     
 }
+
+.centered-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Set a minimum height to center vertically */
+  }

@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setFormData } from "../../Redux/actions";
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Typography } from "@mui/material";
+import { addData, setFormData } from "../../Redux/actions";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Grid,
+  Typography,
+} from "@mui/material";
 import Header from "../../Common/Header";
 import "./book.scss";
 import ButtonComp from "../../Common/Input/Button";
@@ -15,38 +24,38 @@ interface bookData {
 }
 
 const Booking_Screen = () => {
-    const [open, setOpen] = useState(false);
-    const[ticketCount,setTicketCount]=useState();
-    const [totalTax,setTotalTax]=useState<number>();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const [ticketCount, setTicketCount] = useState();
+  const [totalTax, setTotalTax] = useState<number>();
+  const [total, setTotal] = useState<number>();
 
-    const handleOpen = () => {
+  const handleOpen = () => {
+    let count: any = 0;
+    selectedSeats.map((item: any) => {
+      if (item.status == "available") {
+        count++;
+      }
+    });
+    console.log(count, "count is ");
+    calculateTax(count);
+    setTicketCount(count);
 
- 
-        let count:any=0;
-        selectedSeats.map((item:any)=>{
-if(item.status=='available'){
-    count++;
-}
-        });
-        console.log(count,'count is ')
-        calculateTax(count);
-        setTicketCount(count);
+    if (count >= 1) {
+      setOpen(true);
+    }
+  };
+  const calculateTax = (data: number) => {
+    const taxAmount = calculateGST(150 * data, 18);
+    setTotalTax(taxAmount);
+    const total = taxAmount + data * 150;
+    setTotal(total);
+  };
 
-        if(count>=1){
-            setOpen(true);
-        }
- 
-    };
-const  calculateTax=(data:number)=>{
-   const taxAmount= calculateGST(100*data,18);
-   setTotalTax(taxAmount);
-
-}
-    
-  
-    const handleClose = () => {
-      setOpen(false);
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
   const location = useLocation();
   const [selectedSeats, setSelectedSeats] = useState<bookData[]>([]);
   useEffect(() => {
@@ -143,21 +152,46 @@ const  calculateTax=(data:number)=>{
           seat.status = "booked";
         }
       });
+      console.log(selectedSeats, "selected seats ......");
+    } else {
+      console.log("first time booking is here");
+      updatedMovieData.seats.forEach((seat: any) => {
+        const updatedSeat = selectedSeats.find(
+          (selectedSeat) => selectedSeat.id === seat.id
+        );
+        if (updatedSeat) {
+          seat.status = "booked";
+        }
+      });
+      // If there's no existing data, set the initial data to the current state
+      sessionStorage.setItem(localStorageKey, JSON.stringify(updatedMovieData));
     }
 
     // Save the updated movie data to local storage
     sessionStorage.setItem(localStorageKey, JSON.stringify(updatedMovieData));
+    const selectedElements = selectedSeats.slice(-ticketCount!);
+    console.log(selectedElements, "selected Elements");
+    dispatch(addData(location.state.id, selectedElements));
 
     // Log the selected seats (you can replace this with your actual booking logic)
     console.log("Selected Seats:", selectedSeats);
+    navigate("/success");
   };
 
+  const finalConfirmation = () => {
+    handleBooking();
+  };
   return (
     <Grid>
       <Grid>
         <Header />
         <Grid className="content-height"></Grid>
-        <Grid container xs={12} className="content-row">
+        <Grid
+          container
+          xs={12}
+          className="content-row"
+          style={{ maxWidth: "1500px", minWidth: "1400px" }}
+        >
           <Grid item xs={12} sm={12} md={12} className="booking_margin">
             <Typography variant="h5">{location.state.title}</Typography>
             <Grid className="content-height"></Grid>
@@ -165,16 +199,19 @@ const  calculateTax=(data:number)=>{
             <Grid className="content-height"></Grid>
             <Typography variant="h6">screen is here</Typography>
           </Grid>
-          <Grid container>
+          <Grid className="content-height"></Grid>
+          </Grid>
+          <Grid container style={{ paddingTop:"100px",maxWidth: "1500px", minWidth: "1400px" }}>
             {location.state.seats.map((seat: any, index: number) => (
               <Grid
                 item
-                xs={1}
-                sm={1}
-                md={1}
-                lg={1}
+                //   xs={1}
+                //   sm={1}
+                //   md={1}
+                //   lg={1}
                 className="booking_margin_seats"
                 key={index}
+                style={{ flex: "1 0 calc(8% - 10px)" }} // Set a fixed width for each seat to achieve 10 seats per row
               >
                 <Box
                   onClick={() => handleSeatClick(seat)}
@@ -187,8 +224,8 @@ const  calculateTax=(data:number)=>{
                   } ${
                     selectedSeats.some(
                       (selectedSeat) =>
-                        selectedSeat.status == "booked" &&
-                        selectedSeat.id == seat.id
+                        selectedSeat.status === "booked" &&
+                        selectedSeat.id === seat.id
                     )
                       ? "seat-book-back1"
                       : ""
@@ -199,7 +236,7 @@ const  calculateTax=(data:number)=>{
               </Grid>
             ))}
           </Grid>
-        </Grid>
+       
       </Grid>
       {/* <h2>{location.state.title}</h2>
       <img
@@ -223,77 +260,166 @@ const  calculateTax=(data:number)=>{
 
       <Grid className="content-height"></Grid>
       <Grid className="centered-text">
-      <ButtonComp
-      buttonName={'Book Now !'}
-      onClick={()=>handleOpen()}
-      type={'submit'}
-      variant={'contained'}
-      customStyle={{backgroundColor:'red',color:'white'}}
-       />
+        <ButtonComp
+          buttonName={"Book Now !"}
+          onClick={() => handleOpen()}
+          type={"submit"}
+          variant={"contained"}
+          customStyle={{ backgroundColor: "red", color: "white" }}
+        />
       </Grid>
       <Grid className="container-height container_bottom_padding"></Grid>
-      <Footer/>
-      <Dialog className="centered-dialog" maxWidth="md" // Default maximum width for small to medium screens
-   fullWidth // Allow full width for all screens
+      <Footer />
+      <Dialog
+        className="centered-dialog"
+        maxWidth="md" // Default maximum width for small to medium screens
+        fullWidth // Allow full width for all screens
+        //   sx={{
 
+        //     '@media (min-width: 600px)': {
+        //       maxWidth: 'xs', // Change to small width for screens wider than 600px
+        //     },
+        //     '@media (min-width: 960px)': {
+        //         maxWidth: 'sm', // Change to large width for screens wider than 960px
+        //       },
 
-//   sx={{
-    
-//     '@media (min-width: 600px)': {
-//       maxWidth: 'xs', // Change to small width for screens wider than 600px
-//     },
-//     '@media (min-width: 960px)': {
-//         maxWidth: 'sm', // Change to large width for screens wider than 960px
-//       },
-
-//     '@media (min-width: 1000px)': {
-//       maxWidth: 'md', // Change to large width for screens wider than 960px
-//     },
-//   }} 
-  open={open} onClose={handleClose}>
+        //     '@media (min-width: 1000px)': {
+        //       maxWidth: 'md', // Change to large width for screens wider than 960px
+        //     },
+        //   }}
+        open={open}
+        onClose={handleClose}
+      >
         <DialogTitle>Book Ticket</DialogTitle>
         <DialogContent>
-        <Grid container spacing={2}>
+          <Grid container spacing={2}>
             <Grid xs={12} className="content-row">
-            <Grid item xs={6} sm={6}>
-                <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
-                    <Grid xs={6}><Typography className="container_right_padding" variant="h6">Ticket count</Typography></Grid>
-              <Grid xs={6}><Typography className="container_right_padding" variant="h6">{ticketCount}</Typography></Grid>
-              
+              <Grid item xs={6} sm={6}>
+                <Grid
+                  xs={12}
+                  className="content-row"
+                  sx={{ paddingTop: "10px" }}
+                >
+                  <Grid xs={6}>
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      Ticket count
+                    </Typography>
+                  </Grid>
+                  <Grid xs={6}>
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      {ticketCount}
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid
+                  xs={12}
+                  className="content-row"
+                  sx={{ paddingTop: "10px" }}
+                >
+                  <Grid xs={6}>
+                    {" "}
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      Ticket Price
+                    </Typography>
+                  </Grid>
+                  <Grid xs={6}>
+                    {" "}
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      {"₹" + Math.floor(Number(ticketCount)) * 150}
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid
+                  xs={12}
+                  className="content-row"
+                  sx={{ paddingTop: "10px" }}
+                >
+                  <Grid xs={6}>
+                    {" "}
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      Tax
+                    </Typography>
+                  </Grid>
+
+                  <Grid xs={6}>
+                    {" "}
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      {"₹" + totalTax}
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid
+                  xs={12}
+                  className="content-row"
+                  sx={{ paddingTop: "10px" }}
+                >
+                  <Grid xs={6}>
+                    {" "}
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      Total
+                    </Typography>
+                  </Grid>
+
+                  <Grid xs={6}>
+                    {" "}
+                    <Typography
+                      className="container_right_padding"
+                      variant="h6"
+                    >
+                      {"₹" + total}
+                    </Typography>
+                  </Grid>
+                </Grid>
               </Grid>
-              <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
-                <Grid xs={6}> <Typography className="container_right_padding" variant="h6">Ticket Price</Typography></Grid>
-             <Grid xs={6}> <Typography className="container_right_padding" variant="h6">{"₹"+Math.floor(Number(ticketCount))*150}</Typography></Grid>
-             
+              <Grid item xs={6} sm={6} sx={{ paddingTop: "10px" }}>
+                <img
+                  src={location.state.image}
+                  alt="Movie Poster"
+                  width={100}
+                />
               </Grid>
-              <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
-                <Grid xs={6}> <Typography className="container_right_padding" variant="h6">Tax</Typography></Grid>
-             
-              <Grid xs={6}>   <Typography className="container_right_padding" variant="h6">{"₹"+totalTax}</Typography></Grid>
-           
-              </Grid>
-              <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
-                <Grid xs={6}> <Typography className="container_right_padding" variant="h6">Total</Typography></Grid>
-             
-              <Grid xs={6}>   <Typography className="container_right_padding" variant="h6">{"₹"+totalTax}</Typography></Grid>
-           
-              </Grid>
-            </Grid>
-            <Grid item xs={6} sm={6} sx={{paddingTop:'10px'}}>
-              <img src={location.state.image} alt="Movie Poster" width={100} />
             </Grid>
           </Grid>
+          <Grid className="content-height"></Grid>
+          <Grid className="centered-text">
+            <ButtonComp
+              buttonName={"Confirm"}
+              onClick={() => finalConfirmation()}
+              type={"submit"}
+              variant={"contained"}
+              customStyle={{ backgroundColor: "red", color: "white" }}
+            />
           </Grid>
         </DialogContent>
         <DialogActions>
-
           <Button onClick={handleClose} color="primary">
             Close
           </Button>
         </DialogActions>
       </Dialog>
-      
-{/* 
+
+      {/* 
       <div className="selected-seats">
         <h3>Selected Seats:</h3>
         <ul>
