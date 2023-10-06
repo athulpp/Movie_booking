@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setFormData } from "../../Redux/actions";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Typography } from "@mui/material";
 import Header from "../../Common/Header";
 import "./book.scss";
+import ButtonComp from "../../Common/Input/Button";
+import Footer from "../../Common/Footer";
+import { calculateGST } from "../../Common/TaxCalcualtor";
 interface bookData {
   id: any;
   seatNumber: any;
@@ -12,6 +15,38 @@ interface bookData {
 }
 
 const Booking_Screen = () => {
+    const [open, setOpen] = useState(false);
+    const[ticketCount,setTicketCount]=useState();
+    const [totalTax,setTotalTax]=useState<number>();
+
+    const handleOpen = () => {
+
+ 
+        let count:any=0;
+        selectedSeats.map((item:any)=>{
+if(item.status=='available'){
+    count++;
+}
+        });
+        console.log(count,'count is ')
+        calculateTax(count);
+        setTicketCount(count);
+
+        if(count>=1){
+            setOpen(true);
+        }
+ 
+    };
+const  calculateTax=(data:number)=>{
+   const taxAmount= calculateGST(100*data,18);
+   setTotalTax(taxAmount);
+
+}
+    
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
   const location = useLocation();
   const [selectedSeats, setSelectedSeats] = useState<bookData[]>([]);
   useEffect(() => {
@@ -116,30 +151,48 @@ const Booking_Screen = () => {
     // Log the selected seats (you can replace this with your actual booking logic)
     console.log("Selected Seats:", selectedSeats);
   };
-  const seatBoxStyle = {};
+
   return (
     <Grid>
       <Grid>
         <Header />
         <Grid className="content-height"></Grid>
         <Grid container xs={12} className="content-row">
-          <Grid item xs={6} sm={4} md={4} className="booking_margin">
+          <Grid item xs={12} sm={12} md={12} className="booking_margin">
             <Typography variant="h5">{location.state.title}</Typography>
             <Grid className="content-height"></Grid>
             <img src={location.state.image} height={250} width={200} />
+            <Grid className="content-height"></Grid>
+            <Typography variant="h6">screen is here</Typography>
           </Grid>
-          <Grid container spacing={2}>
+          <Grid container>
             {location.state.seats.map((seat: any, index: number) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+              <Grid
+                item
+                xs={1}
+                sm={1}
+                md={1}
+                lg={1}
+                className="booking_margin_seats"
+                key={index}
+              >
                 <Box
-                  style={{
-                    width: "20%", // Set the width to 20% to fit 5 boxes in a row
-                    boxSizing: "border-box",
-                    textAlign: "center",
-                    border: "1px solid #ccc",
-                    margin: "5px",
-                    padding: "10px",
-                  }}
+                  onClick={() => handleSeatClick(seat)}
+                  className={`seat-book ${
+                    selectedSeats.some(
+                      (selectedSeat) => selectedSeat.id === seat.id
+                    )
+                      ? "selected-seat"
+                      : "seat_nonBook"
+                  } ${
+                    selectedSeats.some(
+                      (selectedSeat) =>
+                        selectedSeat.status == "booked" &&
+                        selectedSeat.id == seat.id
+                    )
+                      ? "seat-book-back1"
+                      : ""
+                  }`}
                 >
                   {seat.seatNumber}
                 </Box>
@@ -148,7 +201,7 @@ const Booking_Screen = () => {
           </Grid>
         </Grid>
       </Grid>
-      <h2>{location.state.title}</h2>
+      {/* <h2>{location.state.title}</h2>
       <img
         src={location.state.image}
         height={150}
@@ -163,11 +216,84 @@ const Booking_Screen = () => {
             className={`seat ${seat.status}`}
             onClick={() => handleSeatClick(seat)}
           >
-            {seat.seatNumber}
+            {seat.status}
           </div>
         ))}
-      </div>
+      </div> */}
 
+      <Grid className="content-height"></Grid>
+      <Grid className="centered-text">
+      <ButtonComp
+      buttonName={'Book Now !'}
+      onClick={()=>handleOpen()}
+      type={'submit'}
+      variant={'contained'}
+      customStyle={{backgroundColor:'red',color:'white'}}
+       />
+      </Grid>
+      <Grid className="container-height container_bottom_padding"></Grid>
+      <Footer/>
+      <Dialog className="centered-dialog" maxWidth="md" // Default maximum width for small to medium screens
+   fullWidth // Allow full width for all screens
+
+
+//   sx={{
+    
+//     '@media (min-width: 600px)': {
+//       maxWidth: 'xs', // Change to small width for screens wider than 600px
+//     },
+//     '@media (min-width: 960px)': {
+//         maxWidth: 'sm', // Change to large width for screens wider than 960px
+//       },
+
+//     '@media (min-width: 1000px)': {
+//       maxWidth: 'md', // Change to large width for screens wider than 960px
+//     },
+//   }} 
+  open={open} onClose={handleClose}>
+        <DialogTitle>Book Ticket</DialogTitle>
+        <DialogContent>
+        <Grid container spacing={2}>
+            <Grid xs={12} className="content-row">
+            <Grid item xs={6} sm={6}>
+                <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
+                    <Grid xs={6}><Typography className="container_right_padding" variant="h6">Ticket count</Typography></Grid>
+              <Grid xs={6}><Typography className="container_right_padding" variant="h6">{ticketCount}</Typography></Grid>
+              
+              </Grid>
+              <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
+                <Grid xs={6}> <Typography className="container_right_padding" variant="h6">Ticket Price</Typography></Grid>
+             <Grid xs={6}> <Typography className="container_right_padding" variant="h6">{"₹"+Math.floor(Number(ticketCount))*150}</Typography></Grid>
+             
+              </Grid>
+              <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
+                <Grid xs={6}> <Typography className="container_right_padding" variant="h6">Tax</Typography></Grid>
+             
+              <Grid xs={6}>   <Typography className="container_right_padding" variant="h6">{"₹"+totalTax}</Typography></Grid>
+           
+              </Grid>
+              <Grid xs={12} className="content-row" sx={{paddingTop:"10px"}}>
+                <Grid xs={6}> <Typography className="container_right_padding" variant="h6">Total</Typography></Grid>
+             
+              <Grid xs={6}>   <Typography className="container_right_padding" variant="h6">{"₹"+totalTax}</Typography></Grid>
+           
+              </Grid>
+            </Grid>
+            <Grid item xs={6} sm={6} sx={{paddingTop:'10px'}}>
+              <img src={location.state.image} alt="Movie Poster" width={100} />
+            </Grid>
+          </Grid>
+          </Grid>
+        </DialogContent>
+        <DialogActions>
+
+          <Button onClick={handleClose} color="primary">
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+      
+{/* 
       <div className="selected-seats">
         <h3>Selected Seats:</h3>
         <ul>
@@ -177,7 +303,7 @@ const Booking_Screen = () => {
         </ul>
       </div>
 
-      <button onClick={() => handleBooking()}>Book Seats</button>
+      <button onClick={() => handleBooking()}>Book Seats</button> */}
     </Grid>
   );
 };

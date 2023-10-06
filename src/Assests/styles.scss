@@ -167,12 +167,7 @@
 
       /* Footer styles */
 
-      .content-wrapper_footer {
-        padding-top:  calc(100vh - 64px);
-        height: calc(100vh - 64px); /* Adjust 64px according to your AppBar height */
-        display: flex;
-        // flex-direction: column;
-      }
+      
       .footer {
         background-color: #000 !important;
         color: #fff !important;
@@ -191,4 +186,9 @@
     .centered-text {
         text-align: center !important;
     }
-  
+  .container_bottom_padding{
+    padding-bottom: 5rem !important;
+  }
+  .container_right_padding{
+    padding-right:2rem !important ;
+  }

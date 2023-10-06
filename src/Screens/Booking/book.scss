@@ -8,20 +8,42 @@
     text-align: center !important;
 }
 
-// .seat-box{
-//     display: flex !important;
-//     margin-left: 2rem !important;
-//     margin-right: 2rem !important;
-//     margin-top: 2rem !important;
-//     width: 40px;
-//     height:40px;
-//     // border-radius:50%;
-//     background-color:#ccc;
-//     border:2px solid #aaa;
-//     display:flex;
-//     align-items:center;
-//     justify-content: center;
-//     font-size:18px;
-//     font-weight:bold;
-//     color:#333
-// }
+.booking_margin_seats{
+    margin-left: 2rem !important;
+    // margin-right: 2rem !important;
+    margin-top: 2rem !important;  
+    // align-items: center !important;
+    // justify-content: center !important;
+    // text-align: center !important;
+}  
+
+.seat-book{
+    // width:20% !important;
+    // box-sizing: border-box !important;
+    text-align: center !important;
+    border: 1px solid #ccc !important;
+  background-color: yellow;
+    
+    margin: 5px !important;
+    padding: 10px !important;
+
+}
+
+.seat-book-back1{
+    background-color: #ccc;
+}
+
+
+
+
+
+.seat_nonBook{
+    // width:20% !important;
+    // box-sizing: border-box !important;
+    text-align: center !important;
+    border: 1px solid greenyellow !important;
+    margin: 5px !important;
+    padding: 10px !important;
+     background-color: white;
+    
+}
