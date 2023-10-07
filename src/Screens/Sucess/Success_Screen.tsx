@@ -13,16 +13,21 @@ const Sucess_screen = () => {
     const bookList = useSelector((state:any) => state?.bookedList);
     const currentBookedList=useSelector((state:any)=>state?.form?.movie);
     const bookedSeats=useSelector((state:any)=>state?.form.booked); 
-    console.log(bookList,'bookList1111111111111111');
+    const jsonString = JSON.stringify(bookList);
+    console.log(jsonString,'jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj');
+
+
+    
+    
+  
     const downloadPdf = () => {
         let save:any=saveAs
-        // Create a new jsPDF instance
-        const width = 85; // 85mm for width
-const height = 55; // 55mm for height
+        const width = 85;
+const height = 55; 
 
         const doc = new jsPDF({
-          orientation: 'portrait', // 'portrait' or 'landscape'
-          unit: 'mm', // units of measurement: 'mm', 'cm', 'in', 'px'
+          orientation: 'portrait', 
+          unit: 'mm', 
           format: [width, height], // specify the custom width and height for your page
         });
     const seatNumber=bookedSeats.seats.map((item:any)=>{
@@ -62,6 +67,7 @@ return item.seatNumber.toString()
             <Header/>
             <Grid className='content-height'></Grid>
             <Grid container justifyContent="center" alignItems="center" style={{ minHeight: '80vh' }}>
+              <input type='button' value={'book screen'} onClick={()=>navigate('/booklist')}></input>
                 <Grid item xs={12} className='success_center'>
                     
                   <Typography variant='h4'>Success Your Ticket has been booked!</Typography> 
@@ -75,11 +81,11 @@ return item.seatNumber.toString()
                     customStyle={{backgroundColor:'red',color:'white'}}
                     /> 
                     <ButtonComp
-                    buttonName={"Home"}
+                    buttonName={"Take your Bill"}
                     onClick={()=>downloadPdf()}
                     type="submit"
                     variant='contained'
-                    customStyle={{backgroundColor:'yellow',color:'white'}}
+                    customStyle={{backgroundColor:'yellow',color:'black'}}
                     /> 
                   </Grid>
                 </Grid>

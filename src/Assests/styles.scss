@@ -78,6 +78,16 @@
     justify-content: center !important;
   }
 
+  @media (max-width: 600px) {
+    .font_ShopName {
+      font-size: 1rem !important; /* Decrease font size for small screens */
+    }
+  }
+
+  .underline-on-hover:hover {
+    text-decoration: underline!important;
+    cursor: pointer !important; /* Optional: Change cursor to a pointer on hover */
+  }
 /* CustomCarousel.css */
 
 .carousel-container {

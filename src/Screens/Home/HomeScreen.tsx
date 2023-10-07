@@ -12,8 +12,6 @@ import { setFormData } from '../../Redux/actions';
 const HomeScreen = () => {
   const dispatch = useDispatch();
   const userIsLoggedIn = useSelector((state:any) => state?.userReducer.userIsLoggedIn);
-
-  console.log(userIsLoggedIn,'hyyyyyhhh') 
 const navigate=useNavigate();
   useEffect(()=>{
 if(!userIsLoggedIn){
