@@ -202,3 +202,23 @@
   .container_right_padding{
     padding-right:2rem !important ;
   }
+
+  .centered-image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    // height: 100vh; /* 100% of the viewport height */
+  }
+
+  .centered-image-container {
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+    // height: 100vh; /* 100% of the viewport height */
+  }
+
+  
+  
+  
+  
+  
+  

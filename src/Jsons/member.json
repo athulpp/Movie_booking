@@ -3,21 +3,30 @@
       "id": 1,
       "email": "maneesh@nivid.co",
       "name":"Maneesh",
-      "password": "password"
+      "last_name":"C",
+      "phone":"9878745896",
+      "password": "password",
+      "image":"https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
      
     },
     {
       "id": 2,
       "email": "neethu@nivid.co",
       "name":"Neethu",
-      "password": "password"
+      "last_name":"K P",
+      "phone":"7898456123",
+      "password": "password",
+      "image":"https://i.pinimg.com/564x/3e/5b/a9/3e5ba9cf12565cbf201e2447753b9401.jpg"
   
     },
     {
       "id": 3,
       "email": "remitha@nivid.co",
       "name":"Remitha",
-      "password": "password"
+      "last_name":"P P",
+      "phone":"7862146541",
+      "password": "password",
+      "image":"https://i.pinimg.com/564x/3e/5b/a9/3e5ba9cf12565cbf201e2447753b9401.jpg"
 
     }
     

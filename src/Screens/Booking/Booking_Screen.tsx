@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addData, setFormData } from "../../Redux/actions";
 import {
+  Alert,
+  AlertTitle,
   Box,
   Button,
   Dialog,
@@ -61,7 +63,6 @@ const Booking_Screen = () => {
   const location = useLocation();
   const [selectedSeats, setSelectedSeats] = useState<bookData[]>([]);
   useEffect(() => {
-    // Create a key for storing movie data in local storage
     const localStorageKey = `movie_${location.state.id}`;
 
     // Get the existing movie data from local storage
@@ -74,31 +75,10 @@ const Booking_Screen = () => {
         (seat: any) => seat.status === "booked"
       );
 
-      // Set the booked seats as the initial selected seats
       setSelectedSeats(bookedSeats);
       console.log(bookedSeats, "booked seats");
     }
   }, [location.state.id]);
-  //   const handleSeatClick = (seat:any) => {
-  //     if (seat.status === 'available') {
-  //       // Check if the seat is not already in the selectedSeats array (to avoid duplicate selection)
-  //       if (!selectedSeats.some((selectedSeat) => selectedSeat.id === seat.id)) {
-  //         // Add the seat to selected seats
-  //         setSelectedSeats([...selectedSeats, seat]);
-
-  //         // Update the seat status to 'booked'
-  //         // const updatedSeats = location.state.seats.map((s:any) =>
-  //         //   s.id === seat.id ? { ...s, status: 'booked' } : s
-  //         // );
-
-  //         // // Update the movie's seats data
-  //         // location.state.seats = updatedSeats;
-  //       }
-  //     } else if (seat.status === 'booked') {
-  //       // Seat is already booked, handle accordingly (e.g., show a message)
-  //       console.log(`Seat ${seat.seatNumber} is already booked.`);
-  //     }
-  //   };
 
   const handleSeatClick = (seat: any) => {
     // Check if the seat is already booked in local storage
@@ -111,7 +91,7 @@ const Booking_Screen = () => {
     );
 
     if (isSeatBooked) {
-      // Seat is already booked in local storage, handle accordingly (e.g., show a message)
+ 
       console.log(`Seat ${seat.seatNumber} is already booked.`);
       return;
     }
@@ -134,15 +114,14 @@ const Booking_Screen = () => {
   };
 
   const handleBooking = () => {
-    // Create a key for storing movie data in local storage
+ 
     const localStorageKey = `movie_${location.state.id}`;
 
-    // Get the existing movie data from local storage
+
     const storedMovieData = sessionStorage.getItem(localStorageKey);
     let updatedMovieData = location.state;
 
     if (storedMovieData) {
-      // If movie data exists, parse it and update the seats
       const parsedMovieData = JSON.parse(storedMovieData);
 
       // Update the seat status in the parsed movie data
@@ -201,8 +180,7 @@ const Booking_Screen = () => {
         <Grid
           container
           xs={12}
-          className="content-row"
-          style={{ maxWidth: "1500px", minWidth: "1400px" }}
+          className="content-row book_screen_full"
         >
           <Grid item xs={12} sm={12} md={12} className="booking_margin">
             <Typography variant="h5">{location.state.title}</Typography>
@@ -215,11 +193,7 @@ const Booking_Screen = () => {
         </Grid>
         <Grid
           container
-          style={{
-            paddingTop: "100px",
-            maxWidth: "1500px",
-            minWidth: "1400px",
-          }}
+          className="book_seats_full"
         >
           {location.state.seats.map((seat: any, index: number) => (
             <Grid
@@ -256,26 +230,6 @@ const Booking_Screen = () => {
           ))}
         </Grid>
       </Grid>
-      {/* <h2>{location.state.title}</h2>
-      <img
-        src={location.state.image}
-        height={150}
-        width={100}
-        alt={location.state.title}
-      />
-
-      <div className="seat-container">
-        {location.state.seats.map((seat: any) => (
-          <div
-            key={seat.id}
-            className={`seat ${seat.status}`}
-            onClick={() => handleSeatClick(seat)}
-          >
-            {seat.status}
-          </div>
-        ))}
-      </div> */}
-
       <Grid className="content-height"></Grid>
       <Grid className="centered-text">
         <ButtonComp
@@ -290,21 +244,8 @@ const Booking_Screen = () => {
       <Footer />
       <Dialog
         className="centered-dialog"
-        maxWidth="md" // Default maximum width for small to medium screens
-        fullWidth // Allow full width for all screens
-        //   sx={{
-
-        //     '@media (min-width: 600px)': {
-        //       maxWidth: 'xs', // Change to small width for screens wider than 600px
-        //     },
-        //     '@media (min-width: 960px)': {
-        //         maxWidth: 'sm', // Change to large width for screens wider than 960px
-        //       },
-
-        //     '@media (min-width: 1000px)': {
-        //       maxWidth: 'md', // Change to large width for screens wider than 960px
-        //     },
-        //   }}
+        maxWidth="md" 
+        fullWidth 
         open={open}
         onClose={handleClose}
       >
@@ -341,7 +282,6 @@ const Booking_Screen = () => {
                   sx={{ paddingTop: "10px" }}
                 >
                   <Grid xs={6}>
-                    {" "}
                     <Typography
                       className="container_right_padding"
                       variant="h6"
@@ -350,7 +290,6 @@ const Booking_Screen = () => {
                     </Typography>
                   </Grid>
                   <Grid xs={6}>
-                    {" "}
                     <Typography
                       className="container_right_padding"
                       variant="h6"
@@ -436,18 +375,6 @@ const Booking_Screen = () => {
           </Button>
         </DialogActions>
       </Dialog>
-
-      {/* 
-      <div className="selected-seats">
-        <h3>Selected Seats:</h3>
-        <ul>
-          {selectedSeats.map((seat) => (
-            <li key={seat.id}>{seat.seatNumber}</li>
-          ))}
-        </ul>
-      </div>
-
-      <button onClick={() => handleBooking()}>Book Seats</button> */}
     </Grid>
   );
 };

@@ -63,7 +63,7 @@ const Header = () => {
               <img height={50} src={movieLogo} />
             </Grid>
             <Grid item xs={4} sm={5}>
-              <Typography className="font_ShopName" variant="h5">
+              <Typography className="font_ShopName" variant="h5" onClick={()=>navigate('/home')}>
                 Cinema Gate
               </Typography>
             </Grid>
@@ -73,6 +73,7 @@ const Header = () => {
                   <Typography
                     className="content-left-padding underline-on-hover"
                     variant="h5"
+                onClick={()=>navigate('/profile')}
                   >
                     {`Hello ${' '} ${userDetails?.name}`}
                   </Typography>
