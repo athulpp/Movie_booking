@@ -1,0 +1,22 @@
+.profile_Movies_container{
+    background-color: #ccc;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+
+}
+.profile_margin{
+    padding: 1rem;
+}
+.profile_pad_bottom{
+    padding-bottom: 1rem !important;
+}
+
+.profile_divider{
+    background-color: white !important;
+    height: 0.5rem !important;
+}
+
+.scrollable-content-right {
+    max-height: calc(100vh - 200px); /* Adjust the value as needed to fit your layout */
+    overflow-y: auto;
+  }

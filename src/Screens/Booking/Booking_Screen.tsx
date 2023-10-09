@@ -166,6 +166,7 @@ const Booking_Screen = () => {
       ticketPrice: 150 * ticketCount!,
       totalCharge: total!,
       date: getCurrentDateTime(),
+      
     };
     dispatch(addData(userDetails.id, filmList));
     dispatch(setFormData("booked", filmList));
@@ -178,6 +179,8 @@ const Booking_Screen = () => {
   const finalConfirmation = () => {
     handleBooking();
   };
+
+  console.log(location.state,'my full data here...........');
   return (
     <Grid>
       <Grid>

@@ -23,7 +23,7 @@ const Sucess_screen = () => {
     if(!userIsLoggedIn){
       navigate('/');
     }
-  })
+  },[]);
 
   const downloadPdf = () => {
     let save: any = saveAs;

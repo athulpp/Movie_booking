@@ -136,9 +136,24 @@
     cursor: pointer;
 }
 
+@media (max-width:600px) {
+  .wrapper{
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: pointer;
+  }
+  
+}
+
 .wrapper::-webkit-scrollbar{
     width: 0;
 }
+
  
 .wrapper .item{
     min-width: 300px;
@@ -149,6 +164,18 @@
     margin-right: 1.2rem;
 
 
+}
+
+@media (max-width:600px) {
+  .wrapper .item{
+    min-width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 0.8rem;
+  }
+
+  
 }
 .wrapper .item img {
     max-width: 100%; /* Ensure images scale down to fit their container */
