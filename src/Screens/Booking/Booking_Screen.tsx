@@ -34,6 +34,8 @@ const Booking_Screen = () => {
   const [totalTax, setTotalTax] = useState<number>();
   const [total, setTotal] = useState<number>();
   const userDetails = useSelector((state: any) => state?.form.user);
+  const theaterDetails=useSelector((state:any)=>state?.form.theatre);
+  console.log(theaterDetails,'theaterDetails ==========');
   console.log(userDetails, "userDetails is here");
   const handleOpen = () => {
     let count: any = 0;
@@ -166,6 +168,7 @@ const Booking_Screen = () => {
       ticketPrice: 150 * ticketCount!,
       totalCharge: total!,
       date: getCurrentDateTime(),
+      theatre:theaterDetails
       
     };
     dispatch(addData(userDetails.id, filmList));
