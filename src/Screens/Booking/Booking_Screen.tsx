@@ -62,7 +62,13 @@ const Booking_Screen = () => {
   };
   const location = useLocation();
   const [selectedSeats, setSelectedSeats] = useState<bookData[]>([]);
+  const userIsLoggedIn = useSelector(
+    (state: any) => state?.userReducer.userIsLoggedIn
+  );
   useEffect(() => {
+    if (!userIsLoggedIn) {
+      navigate("/");
+    }
     const localStorageKey = `movie_${location.state.id}`;
 
     // Get the existing movie data from local storage

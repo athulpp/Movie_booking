@@ -24,3 +24,52 @@ overflow: hidden;
     color: white; // Default text color
 text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.8)
 }
+
+.movie_rating_box{
+  background-color: #ccc !important;
+  width: 130px !important;
+  border-radius: 20px !important;
+}
+
+.movie_review_box{
+  max-width: 25rem !important;
+  background-color: #ccc !important; 
+  border-radius: 8px !important;
+  padding: 20px !important;
+  font-size: large !important;
+}
+
+@media (max-width: 600px) {
+  .movie_review_box {
+    max-width: 100% !important; /* Adjust to fit the screen width */
+    border-radius: 8px !important; /* Remove border-radius */
+    padding: 5px !important; /* Reduce padding for smaller screens */
+    font-size: x-large !important;
+  }
+}
+
+.movie_description_list{
+  color: white !important;
+  font-weight: bold !important;
+  font-size: medium !important;
+  border: 2px solid #79443B !important;
+  margin: 1rem !important;
+  padding: 6.2rem !important;
+  border-radius: 10px!important ;
+  background-image: url('https://e0.pxfuel.com/wallpapers/235/160/desktop-wallpaper-grunge-film-strip-background-stock-graphy-7454192-film-reel.jpg');
+}
+
+@media (max-width:600px) {
+  .movie_description_list{
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 0.5rem !important;
+    border: 1px solid #79443B !important;
+    margin: 1rem !important;
+    padding: 1.2rem !important;
+    padding-top: 4.4rem !important;
+    border-radius: 5px !important;
+    background-image: url('https://e0.pxfuel.com/wallpapers/235/160/desktop-wallpaper-grunge-film-strip-background-stock-graphy-7454192-film-reel.jpg');
+  }
+  
+}
