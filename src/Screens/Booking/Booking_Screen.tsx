@@ -204,44 +204,34 @@ const Booking_Screen = () => {
           </Grid>
           <Grid className="content-height"></Grid>
         </Grid>
-        <Grid
-          container
-          className="book_seats_full"
-        >
-          {location.state.seats.map((seat: any, index: number) => (
-            <Grid
-              item
-              //   xs={1}
-              //   sm={1}
-              //   md={1}
-              //   lg={1}
-              className="booking_margin_seats"
-              key={index}
-              style={{ flex: "1 0 calc(8% - 10px)" }} // Set a fixed width for each seat to achieve 10 seats per row
-            >
-              <Box
-                onClick={() => handleSeatClick(seat)}
-                className={`seat-book ${
-                  selectedSeats.some(
-                    (selectedSeat) => selectedSeat.id === seat.id
-                  )
-                    ? "selected-seat"
-                    : "seat_nonBook"
-                } ${
-                  selectedSeats.some(
-                    (selectedSeat) =>
-                      selectedSeat.status === "booked" &&
-                      selectedSeat.id === seat.id
-                  )
-                    ? "seat-book-back1"
-                    : ""
-                }`}
-              >
-                {seat.seatNumber}
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
+        <Grid container className="booking_seats_container">
+  {location.state.seats.map((seat: any, index: number) => (
+    <Grid
+      item
+      className="booking_margin_seats"
+      key={index}
+    >
+      <Box
+        onClick={() => handleSeatClick(seat)}
+        className={`seat-book ${
+          selectedSeats.some((selectedSeat) => selectedSeat.id === seat.id)
+            ? "selected-seat"
+            : "seat_nonBook"
+        } ${
+          selectedSeats.some(
+            (selectedSeat) =>
+              selectedSeat.status === "booked" && selectedSeat.id === seat.id
+          )
+            ? "seat-book-back1"
+            : ""
+        }`}
+      >
+        {seat.seatNumber}
+      </Box>
+    </Grid>
+  ))}
+</Grid>
+
       </Grid>
       <Grid className="content-height"></Grid>
       <Grid className="centered-text">

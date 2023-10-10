@@ -1,14 +1,24 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../../Common/Header";
 import { Grid, Typography } from "@mui/material";
 import Footer from "../../Common/Footer";
+import { useNavigate } from "react-router-dom";
 const Theater_Bill_Screen = () => {
+    const navigate=useNavigate();
 
   const location = useLocation();
   console.log(location.state, "here the data is getting is here");
+  const userIsLoggedIn = useSelector(
+    (state: any) => state?.userReducer.userIsLoggedIn
+  );
 
+  useEffect(()=>{
+if(!userIsLoggedIn){
+    navigate("/")
+}
+  },[]);
 
   return (
     <div>
@@ -78,7 +88,7 @@ const Theater_Bill_Screen = () => {
                   className="content-row space_between bill_pad_left"
                 >
                   <Typography>Movie :</Typography>
-                  <Typography>{" " + location.state.movie}</Typography>
+                  <Typography>{" " + location.state?.movie}</Typography>
                 </Grid>
               </Grid>
               <Grid container className="content-row_withoutPad">
@@ -90,7 +100,7 @@ const Theater_Bill_Screen = () => {
                   className="content-row space_between bill_pad_left"
                 >
                   <Typography>Date :</Typography>
-                  <Typography>{location.state.date}</Typography>
+                  <Typography>{location.state?.date}</Typography>
                 </Grid>
               </Grid>
               <Grid container className="content-row_withoutPad">
@@ -102,7 +112,7 @@ const Theater_Bill_Screen = () => {
                   className="content-row space_between bill_pad_left"
                 >
                   <Typography>Ticket price :</Typography>
-                  <Typography>{"₹" + location.state.ticketPrice}</Typography>
+                  <Typography>{"₹" + location.state?.ticketPrice}</Typography>
                 </Grid>
               </Grid>
               <Grid container className="content-row_withoutPad">
@@ -114,7 +124,7 @@ const Theater_Bill_Screen = () => {
                   className="content-row space_between bill_pad_left"
                 >
                   <Typography>Tax :</Typography>
-                  <Typography>{"₹" + location.state.tax}</Typography>
+                  <Typography>{"₹" + location.state?.tax}</Typography>
                 </Grid>
               </Grid>
               <Grid container className="content-row_withoutPad">
@@ -126,7 +136,7 @@ const Theater_Bill_Screen = () => {
                   className="content-row space_between bill_pad_left"
                 >
                   <Typography>Total :</Typography>
-                  <Typography>{"₹" + location.state.totalCharge}</Typography>
+                  <Typography>{"₹" + location.state?.totalCharge}</Typography>
                 </Grid>
               </Grid>
               <Grid container className="content-row_withoutPad">
@@ -135,21 +145,21 @@ const Theater_Bill_Screen = () => {
                   xs={12}
                   sm={6}
                   md={8}
-                  className="content-row space_between "
+                  className="content-row space_between bill_pad_left"
                 >
                   <Typography>Seats :</Typography>
                   <Typography>
-                    {location.state.seats.length > 1
-                      ? location.state.seats
+                    {location.state?.seats.length > 1
+                      ? location.state?.seats
                           .map((item: any) => item.seatNumber)
                           .join(",")
-                      : location.state.seats[0].seatNumber}
+                      : location.state?.seats[0].seatNumber}
                   </Typography>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xs={0} sm={4} md={4}>
-              <img src={location.state.filmImage} height={250} width={200} />
+              <img src={location.state?.filmImage} height={250} width={200} />
               {/* Place your content for the second portion here */}
             </Grid>
           </Grid>

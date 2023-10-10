@@ -40,6 +40,9 @@ const Header = () => {
       <ListItem button onClick={() => Logout()}>
         <ListItemText primary="Logout" />
       </ListItem>
+      <ListItem onClick={()=>navigate('/profile')}>
+        <ListItemText primary="profile"></ListItemText>
+      </ListItem>
     </List>
   );
 
@@ -78,7 +81,7 @@ const Header = () => {
                     {`Hello ${' '} ${userDetails?.name}`}
                   </Typography>
                 </Grid>
-                <Grid item xs={2} sm={1}>
+                <Grid item xs={2} sm={2} >
                   <Button color="inherit" onClick={() => Logout()}>
                     Logout
                   </Button>

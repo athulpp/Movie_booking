@@ -7,6 +7,7 @@ import Footer from "../../Common/Footer";
 import ButtonComp from "../../Common/Input/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { setFormData } from "../../Redux/actions";
+import { formatDate } from "../../Common/date_conversion";
 
 const Booke_show = () => {
   const dispatch=useDispatch();
@@ -53,35 +54,36 @@ dispatch(setFormData('theatreBill',data));
       <Grid className="content-height"></Grid>
       <Grid container xs={12} sm={12} md={12} className="profile_margin">
         <Grid className="content-height"></Grid>
-        <Grid item xs={6} sm={4} sx={{ border: "2px solid #ccc" }}>
-          <div className="centered-image-container">
-            <img src={userDetails.image} height={100} width={100} />
-          </div>
+        <Grid item xs={12} sm={6} md={4} lg={3} sx={{ border: "2px solid #ccc" }}>
+  <div className="centered-image-container">
+    <img src={userDetails.image} height={100} width={100} alt="User" />
+  </div>
 
-          <Typography variant="h4" className="content-row">
-            Profile
-          </Typography>
-          <Grid className="content-height"></Grid>
-          <Grid className="content-row space_between">
-            <Typography variant="h6">Name</Typography>
-            <Typography variant="h6">{userDetails.name}</Typography>
-          </Grid>
-          <Grid className="content-row space_between">
-            <Typography variant="h6">Last Name</Typography>
-            <Typography variant="h6">{userDetails.last_name}</Typography>
-          </Grid>
-          <Grid className="content-row space_between">
-            <Typography variant="h6">Email</Typography>
-            <Typography variant="h6">{userDetails.email}</Typography>
-          </Grid>
-          <Grid className="content-row space_between">
-            <Typography variant="h6">Phone</Typography>
-            <Typography variant="h6">{userDetails.phone}</Typography>
-          </Grid>
-        </Grid>
+  <Typography variant="h4" className="content-row">
+    Profile
+  </Typography>
+  <Grid className="content-height"></Grid>
+  <Grid className="content-row space_between">
+    <Typography variant="h6">Name</Typography>
+    <Typography variant="h6">{userDetails.name}</Typography>
+  </Grid>
+  <Grid className="content-row space_between">
+    <Typography variant="h6">Last Name</Typography>
+    <Typography variant="h6">{userDetails.last_name}</Typography>
+  </Grid>
+  <Grid className="content-row space_between">
+    <Typography variant="h6">Email</Typography>
+    <Typography variant="h6">{userDetails.email}</Typography>
+  </Grid>
+  <Grid className="content-row space_between">
+    <Typography variant="h6">Phone</Typography>
+    <Typography variant="h6">{userDetails.phone}</Typography>
+  </Grid>
+</Grid>
+
         <Grid
           item
-          xs={0}
+          xs={1}
           sm={1}
           textAlign={"center"}
           justifyContent={"center"}
@@ -93,7 +95,7 @@ dispatch(setFormData('theatreBill',data));
             <div>{ArrowList()}</div>
           </>
         </Grid>
-        <Grid item xs={6} sm={7} className="scrollable-content-right">
+        <Grid item xs={11} sm={7} className="scrollable-content-right">
           {bookList.map((item: any) => {
             if (item.key === userDetails.id) {
               if (item.data.length > 1) {
@@ -112,7 +114,7 @@ dispatch(setFormData('theatreBill',data));
                             </Grid>
                             <Grid xs={6} sm={6} className="content-row">
                               <Typography>Date:</Typography>
-                              <Typography>{movie.date}</Typography>
+                              <Typography>{formatDate(movie.date)}</Typography>
                             </Grid>
                             <Grid className="content-height"></Grid>
                             <Grid
@@ -145,6 +147,19 @@ dispatch(setFormData('theatreBill',data));
                     <div className="profile_Movies_container profile_margin">
                       <Typography>{item.data[0].movie}</Typography>
                       <Typography>{item.data[0].date}</Typography>
+                      <Grid textAlign={"end"} sx={{ paddingRight: "5px" }}>
+                            <ButtonComp
+                              buttonName={"View"}
+                              type={"submit"}
+                              variant={"contained"}
+                              customStyle={{
+                                backgroundColor: "red",
+                                color: "white",
+                                borderRadius: "15px",
+                              }}
+                              onClick={() => navigateDetails(item.data[0])}
+                            />
+                          </Grid>
                     </div>
                   </div>
                 );

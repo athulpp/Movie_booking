@@ -8,15 +8,40 @@
     text-align: center !important;
 }
 
-.booking_margin_seats{
-    // padding-left: 5rem !important;
-     margin-left: 2rem !important;
-    // margin-right: 2rem !important;
-    margin-top: 2rem !important;  
-    // align-items: center !important;
-    // justify-content: center !important;
-    // text-align: center !important;
-}  
+// .booking_margin_seats{
+//     flex: 1 0 calc(10% - 10px);
+
+// }  
+// @media (max-width:600px) {
+//     .booking_margin_seats{
+//         flex:1 1 calc(7% - 2px);
+//     }
+    
+// }
+
+.booking_seats_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px; /* Adjust as needed for spacing between items */
+    /* Other CSS styles for the container */
+  }
+  
+  .booking_margin_seats {
+    /* CSS styles for individual seats */
+    flex-grow: 1; /* Allow seats to grow and shrink based on available space */
+    max-width: calc(10% - 10px); /* Limit maximum width */
+    width: calc(10% - 10px); /* Initial width for larger screens */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .booking_margin_seats {
+      width: calc(20% - 10px); /* Adjust width for smaller screens (2 seats per row) */
+    }
+  }
+  
+  
+  
 
 .seat-book{
     // width:20% !important;
@@ -32,7 +57,21 @@
 
 .seat-book-back1{
     background-color: #ccc;
+
 }
+
+@media (max-width:600px) {
+    .seat-book-back1{
+        background-color: #ccc;
+        font-size: 12px;
+        text-align: center !important;
+        border:1px solid greenyellow !important;
+        margin: 2px !important;
+        padding: 5px !important;
+    }
+    
+}
+
 
 
 
@@ -46,6 +85,19 @@
     margin: 5px !important;
     padding: 10px !important;
      background-color: white;
+     
+    
+}
+
+@media (max-width:600px) {
+    .seat_nonBook{
+        text-align: center !important;
+        border:1px solid greenyellow !important;
+        margin: 2px !important;
+        padding: 5px !important;
+        background-color: white;
+        font-size: 12px!important;
+    }
     
 }
 
@@ -56,14 +108,14 @@
     min-height: 100vh;
   }
 
-  .book_screen_full{
-    max-width: 1500px;
-    min-width: 1400px;
+//   .book_screen_full{
+//     max-width: 1500px;
+//     min-width: 1400px;
 
-  }
+//   }
 
   .book_seats_full{
     padding-top: 100px;
-    max-width: 1500px;
-    min-width: 1400px;
+    // max-width: 1500px;
+    // min-width: 1400px;
   }

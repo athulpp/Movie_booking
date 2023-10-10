@@ -91,23 +91,23 @@ const Movie_Detail_screen = () => {
               />
             </Grid>
             <Grid className="content-height"></Grid>
-            <Grid className="content-height"></Grid>
+            {/* <Grid className="content-height"></Grid> */}
             <Grid className='movie_review_box'>
               <Grid className="content-row_withoutPad" xs={12}>
-                <Grid xs={4} sm={6} className="content-row_withoutPad">
+                <Grid item xs={0} sm={6} className="content-row_withoutPad">
                   <Typography >Add Rating & Review</Typography>
                 </Grid>
-                <Grid xs={1} sm={2}></Grid>
-                <Grid xs={2} sm={4}>
+                <Grid xs={0} sm={2}></Grid>
+                <Grid xs={0} sm={4}>
                   <ButtonComp
                     buttonName={"rate now"}
-                    customStyle={{ backgroundColor: "#F5DEB3", color: "black" }}
+                    customStyle={{ backgroundColor: "#F5DEB3", color: "black",height:"50px"  }}
                   />
                 </Grid>
               </Grid>
             </Grid>
             <Grid className="content-height"></Grid>
-            <Grid className="content-height"></Grid>
+            {/* <Grid className="content-height"></Grid> */}
             <ButtonComp
               buttonName={"Book Tickets"}
               onClick={() => navigateToBooking()}
