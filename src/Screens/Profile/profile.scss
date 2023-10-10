@@ -22,3 +22,41 @@
     max-height: calc(100vh - 200px); /* Adjust the value as needed to fit your layout */
     overflow-y: auto;
   }
+
+
+  /* ImageWithText.css */
+
+.bill-container {
+    // padding-left: 10rem;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    // width: 300px; /* Set your desired width */
+    height: 100%; /* Set your desired height */
+    position: relative;
+    color: black; /* Text color */
+    text-align: center; /* Center-align text */
+    // background-color: #ccc;
+    // background-image: url('https://media.istockphoto.com/id/133903131/photo/coupon-border.jpg?s=612x612&w=0&k=20&c=0hMZedJh1tqsclAk5Mc2ggAAtfFbJTGJeV_8MlZEYT8=');
+  }
+  
+//   .bill-text-overlay {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: rgba(0, 0, 0, 0.5); /* Overlay background color with opacity */
+//     // display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+  
+  .bill_margin_top{
+    padding-top: 30px;
+  }
+
+  .bill_pad_left{
+    padding-left: 7.6rem;
+  }

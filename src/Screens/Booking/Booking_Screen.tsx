@@ -163,12 +163,13 @@ const Booking_Screen = () => {
     const filmList = {
       seats: selectedElements,
       movie: location.state.title,
-      Booking_Screen,
+      // Booking_Screen,
       tax: totalTax!,
       ticketPrice: 150 * ticketCount!,
       totalCharge: total!,
       date: getCurrentDateTime(),
-      theatre:theaterDetails
+      theatre:theaterDetails,
+      filmImage:location.state.image
       
     };
     dispatch(addData(userDetails.id, filmList));

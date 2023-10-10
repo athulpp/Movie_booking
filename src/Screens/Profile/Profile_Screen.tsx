@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
 import Header from "../../Common/Header";
 import { Grid, Typography } from "@mui/material";
 import "./profile.scss";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Common/Footer";
 import ButtonComp from "../../Common/Input/Button";
+import { useSelector, useDispatch } from "react-redux";
+import { setFormData } from "../../Redux/actions";
 
 const Booke_show = () => {
+  const dispatch=useDispatch();
   const navigate = useNavigate();
   const bookList = useSelector((state: any) => state?.bookedList.dataArray);
   // const bookList = [...originalBookList].slice().reverse();
-  console.log("bool", JSON.stringify(bookList));
+  console.log("bool", bookList);
   const userDetails = useSelector((state: any) => state?.form.user);
   const userIsLoggedIn = useSelector(
     (state: any) => state?.userReducer.userIsLoggedIn
@@ -37,6 +39,13 @@ const Booke_show = () => {
       </div>
     );
   };
+
+  const navigateDetails=(data:any)=>{
+console.log(data,'vvvvvvvvvvv');
+navigate('/storebill',{state:data});
+dispatch(setFormData('theatreBill',data));
+
+  }
 
   return (
     <div>
@@ -123,7 +132,7 @@ const Booke_show = () => {
                                 color: "white",
                                 borderRadius: "15px",
                               }}
-                              onClick={() => console.log(movie, "movie")}
+                              onClick={() => navigateDetails(movie)}
                             />
                           </Grid>
                         </div>

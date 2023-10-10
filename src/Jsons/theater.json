@@ -5,6 +5,8 @@
           "name": "Savitha Film City",
           "address": "Padannapalam, Kannur, Kerala 670014",
           "contact_number": "98538-24567",
+          "image":"https://cdn.citymapia.com/kochi/sangeetha-theatre/2898/businessbanner.jpg",
+          "capacity":"50 seats",
           "films": [
             {
               "id": 1,
@@ -1926,6 +1928,8 @@
           "name": "Sagara Film City",
           "address": "Padannapalam, Kannur, Kerala 670014",
           "contact_number": "98538-24567",
+          "image":"https://cdn.citymapia.com/kochi/sangeetha-theatre/2898/businessbanner.jpg",
+          "capacity":"50 seats",
           "films": [
             {
               "id": 11,
