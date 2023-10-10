@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+/*{
+  this font for family for light
+}*/
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("AirbnbRoboto-LightCerealLight"),
+    url("../src/Assests/font/Roboto-Light.ttf") format("truetype");
+}
+/*{
+  this font for family for medium
+}*/
+@font-face {
+  font-family: "Medium";   /*Can be any text*/
+  src: local("AirbnbRoboto-LightCerealLight"),
+    url("../src/Assests/font/Roboto-Medium.ttf") format("truetype");
+}
+/*{
+  this font for family for bold
+}*/
+@font-face {
+  font-family: "Bold";   /*Can be any text*/
+  src: local("AirbnbRoboto-LightCerealLight"),
+    url("../src/Assests/font/Roboto-Bold.ttf") format("truetype");
+}
+
+
+
+

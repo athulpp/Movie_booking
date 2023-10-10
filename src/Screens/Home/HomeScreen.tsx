@@ -72,8 +72,8 @@ const HomeScreen = () => {
                     />
                   </div>
                   <Grid className="content-row_withoutPad space_between">
-                    <Typography variant="h6">{film.title}</Typography>
-                    <Typography className="font-golden">
+                    <Typography className="font_subHeader_normal">{film.title}</Typography>
+                    <Typography  className="font-golden font_subHeader_bold">
                       {film.rating}
                     </Typography>
                   </Grid>
