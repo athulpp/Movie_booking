@@ -34,8 +34,8 @@ const Booking_Screen = () => {
   const [totalTax, setTotalTax] = useState<number>();
   const [total, setTotal] = useState<number>();
   const userDetails = useSelector((state: any) => state?.form.user);
-  const theaterDetails=useSelector((state:any)=>state?.form.theatre);
-  console.log(theaterDetails,'theaterDetails ==========');
+  const theaterDetails = useSelector((state: any) => state?.form.theatre);
+  console.log(theaterDetails, "theaterDetails ==========");
   console.log(userDetails, "userDetails is here");
   const handleOpen = () => {
     let count: any = 0;
@@ -99,7 +99,6 @@ const Booking_Screen = () => {
     );
 
     if (isSeatBooked) {
- 
       console.log(`Seat ${seat.seatNumber} is already booked.`);
       return;
     }
@@ -122,9 +121,7 @@ const Booking_Screen = () => {
   };
 
   const handleBooking = () => {
- 
     const localStorageKey = `movie_${location.state.id}`;
-
 
     const storedMovieData = sessionStorage.getItem(localStorageKey);
     let updatedMovieData = location.state;
@@ -168,9 +165,8 @@ const Booking_Screen = () => {
       ticketPrice: 150 * ticketCount!,
       totalCharge: total!,
       date: getCurrentDateTime(),
-      theatre:theaterDetails,
-      filmImage:location.state.image
-      
+      theatre: theaterDetails,
+      filmImage: location.state.image,
     };
     dispatch(addData(userDetails.id, filmList));
     dispatch(setFormData("booked", filmList));
@@ -184,54 +180,51 @@ const Booking_Screen = () => {
     handleBooking();
   };
 
-  console.log(location.state,'my full data here...........');
   return (
     <Grid>
       <Grid>
         <Header />
         <Grid className="content-height"></Grid>
-        <Grid
-          container
-          xs={12}
-          className="content-row book_screen_full"
-        >
+        <Grid container xs={12} className="content-row book_screen_full">
           <Grid item xs={12} sm={12} md={12} className="booking_margin">
-            <Typography variant="h5">{location.state.title}</Typography>
+            <Typography className="font_header">
+              {location.state.title}
+            </Typography>
             <Grid className="content-height"></Grid>
             <img src={location.state.image} height={250} width={200} />
             <Grid className="content-height"></Grid>
-            <Typography variant="h6">screen is here</Typography>
+            <Typography className="font_regular_12px">
+              screen is here
+            </Typography>
           </Grid>
           <Grid className="content-height"></Grid>
         </Grid>
-        <Grid container className="booking_seats_container">
-  {location.state.seats.map((seat: any, index: number) => (
-    <Grid
-      item
-      className="booking_margin_seats"
-      key={index}
-    >
-      <Box
-        onClick={() => handleSeatClick(seat)}
-        className={`seat-book ${
-          selectedSeats.some((selectedSeat) => selectedSeat.id === seat.id)
-            ? "selected-seat"
-            : "seat_nonBook"
-        } ${
-          selectedSeats.some(
-            (selectedSeat) =>
-              selectedSeat.status === "booked" && selectedSeat.id === seat.id
-          )
-            ? "seat-book-back1"
-            : ""
-        }`}
-      >
-        {seat.seatNumber}
-      </Box>
-    </Grid>
-  ))}
-</Grid>
-
+        <Grid container className="booking_seats_container ">
+          {location.state.seats.map((seat: any, index: number) => (
+            <Grid item className="booking_margin_seats" key={index}>
+              <Box
+                onClick={() => handleSeatClick(seat)}
+                className={`seat-book ${
+                  selectedSeats.some(
+                    (selectedSeat) => selectedSeat.id === seat.id
+                  )
+                    ? "selected-seat font_regular_12px"
+                    : "seat_nonBook font_regular_12px"
+                } ${
+                  selectedSeats.some(
+                    (selectedSeat) =>
+                      selectedSeat.status === "booked" &&
+                      selectedSeat.id === seat.id
+                  )
+                    ? "seat-book-back1"
+                    : ""
+                }`}
+              >
+                {seat.seatNumber}
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
       <Grid className="content-height"></Grid>
       <Grid className="centered-text">
@@ -247,8 +240,8 @@ const Booking_Screen = () => {
       <Footer />
       <Dialog
         className="centered-dialog"
-        maxWidth="md" 
-        fullWidth 
+        maxWidth="md"
+        fullWidth
         open={open}
         onClose={handleClose}
       >

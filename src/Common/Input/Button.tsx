@@ -7,12 +7,14 @@ type?:any;
 size?:any;
 onClick?:()=>void,
 buttonName?:any
-customStyle?:any
+customStyle?:any;
+className?:any
 
 }
-const ButtonComp = ({variant,color,type,size,onClick,buttonName,customStyle}:LayoutProps) => {
+const ButtonComp = ({variant,color,type,size,onClick,buttonName,customStyle,className}:LayoutProps) => {
   return (
    <Button
+   className={className}
    variant={variant??'contained'}
    color={color??"primary"}
    type={type??"submit"}

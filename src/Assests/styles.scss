@@ -5,11 +5,7 @@
         padding: 5px !important;
         color: white;
         width: 18rem;
- 
-
       } 
-   
-
 }
 
 .font-grey{
@@ -49,7 +45,7 @@
   }
 
   .content-height{
-    height: 1.5rem;
+    height: 1.2rem;
   }
 .content-left-padding{
     margin-left: 1.0rem !important;
@@ -127,7 +123,7 @@
     padding-left: 4rem;
     padding-top: 2rem;
     padding-right: 4rem;
-    height: 500px;
+    height: 420px;
     // border: 1px solid #ddd;
     // width: 100%;
     display: flex;
@@ -239,17 +235,13 @@
 
   .centered-image-container {
     display: grid;
-    place-items: center; /* Center both horizontally and vertically */
-    // height: 100vh; /* 100% of the viewport height */
+    place-items: center; 
   }
 
   .padd_bw{
     margin-left: 4rem !important;
   }
   
-  /*{
-    common font-size listed below
-  }*/
   
   .font_header{
     font-size: 1.5rem !important;
@@ -266,4 +258,23 @@
   font-size: 1.0rem !important;
   font-weight: 600 !important;
   font-family: "Light";
+}
+.font_regular_12px{
+  font-size:0.75!important;
+  font-weight: 400 !important;
+  font-family: "Regular";
+}
+
+.custom-button {
+  background-color: #F5DEB3 !important; 
+  color: #fff !important; 
+  border: none !important;
+  padding: 10px 20px !important;
+  cursor: pointer !important;
+  border-radius: 5px !important; 
+  transition: background-color 0.3s !important;
+}
+
+.custom-button:hover {
+  background-color: #0056b3 !important;
 }

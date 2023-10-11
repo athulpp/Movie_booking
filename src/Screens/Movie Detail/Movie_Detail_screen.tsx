@@ -29,23 +29,6 @@ const Movie_Detail_screen = () => {
   const navigateToBooking = () => {
     navigate("/seatbook", { state: location.state });
   };
-  // const typographyStyle = {
-  //   // Add your custom styles here
-  //   margin: "0",
-  //   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-  //   fontWeight: "bold",
-  //   fontSize: "1.2rem",
-  //   lineHeight: "1.5",
-  //   letterSpacing: "0.00938em",
-  //   color: "white",
-  // };
-
-  // const boxStyle = {
-  //    maxWidth: "25rem",
-  //   backgroundColor: "#ccc", // Grey background color
-  //   borderRadius: "8px", // Rounded corners
-  //   padding: "20px", // Padding for content inside the box
-  // };
   return (
     <Grid container>
       <Header />
@@ -60,24 +43,21 @@ const Movie_Detail_screen = () => {
         {/* Clear image on top */}
         <Grid xs={6} sm={3} className="movie_movie_image">
           <img
-            src={movieData?.image}
-            height={"100%"}
-            width={"100%"}
-            style={{ borderRadius: "20px" }}
+            src={movieData?.image} className="movie_cover_pic"
             alt="Movie"
           />
         </Grid>
         <Grid xs={6} sm={9}>
           <div className="movie_header">
-            <Typography variant="h6">{movieData.title}</Typography>
+            <Typography className="font_header">{movieData?.title}</Typography>
             <Grid className="content-height"></Grid>
-            <Typography>{movieData.genre}</Typography>
+            <Typography className="font_subHeader_bold">{movieData?.genre}</Typography>
             <Grid className="content-height"></Grid>
-            <Grid className="content-row_withoutPad ">
-              <Typography className="container_right_padding">
-                {movieData.duration}
+            <Grid className="content-row_withoutPad">
+              <Typography className="container_right_padding font_subHeader_bold">
+                {movieData?.duration}
               </Typography>
-              <Typography>{movieData.type}</Typography>
+              <Typography className="font_subHeader_bold">{movieData?.type}</Typography>
             </Grid>
             <Grid className="content-height"></Grid>
             <Grid
@@ -85,7 +65,7 @@ const Movie_Detail_screen = () => {
             >
               <Rating
                 name="read-only"
-                value={movieData.rating}
+                value={movieData?.rating}
                 precision={0.5}
                 readOnly
               />
@@ -94,19 +74,20 @@ const Movie_Detail_screen = () => {
             {/* <Grid className="content-height"></Grid> */}
             <Grid className='movie_review_box'>
               <Grid className="content-row_withoutPad" xs={12}>
-                <Grid item xs={0} sm={6} className="content-row_withoutPad">
-                  <Typography >Add Rating & Review</Typography>
+                <Grid item xs={0} sm={6} className="content-row_withoutPad movie_margin_review">
+                  <Typography className="font_regular_12px">Add Rating & Review</Typography>
                 </Grid>
                 <Grid xs={0} sm={2}></Grid>
                 <Grid xs={0} sm={4}>
                   <ButtonComp
+                  className='custom-button'
                     buttonName={"rate now"}
                     customStyle={{ backgroundColor: "#F5DEB3", color: "black",height:"50px"  }}
                   />
                 </Grid>
               </Grid>
             </Grid>
-            <Grid className="content-height"></Grid>
+            <Grid xs={12} sm={6} className="content-height"></Grid>
             {/* <Grid className="content-height"></Grid> */}
             <ButtonComp
               buttonName={"Book Tickets"}
@@ -132,11 +113,11 @@ const Movie_Detail_screen = () => {
         ></div>
       </Grid>
       {/* <Grid className='container-height' style={{paddingBottom:"50px"}}>{'      '}</Grid> */}
-      <Typography variant="h5" className="content-row">
+      <Typography variant="h5" className="content-row font_header">
         About Movie
       </Typography>
-      <Grid xs={12} sm={12} className="movie_description_list">
-        <Typography >{movieData.des}</Typography>
+      <Grid xs={12} sm={12} className="movie_description_list font_regular_12px">
+        <Typography >{movieData?.des}</Typography>
       </Grid>
 
       <Grid className="container-height"></Grid>

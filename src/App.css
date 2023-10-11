@@ -61,6 +61,12 @@
     url("../src/Assests/font/Roboto-Bold.ttf") format("truetype");
 }
 
+@font-face{
+  font-family: "Regular";
+  src: local("roberto-light"),
+  url("../src/Assests/font/Roboto-Regular.ttf")format(truetype);
+}
+
 
 
 

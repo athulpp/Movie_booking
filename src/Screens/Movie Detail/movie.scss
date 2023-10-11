@@ -15,6 +15,19 @@ overflow: hidden;
   z-index: 1;
 }
 
+@media (max-width:600px) {
+  .movie_movie_image{
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    border-radius: 10px;
+    border: 1px solid #ECF2FF;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .movie_header{
     margin-top: 4rem;
     height:30rem;
@@ -38,7 +51,27 @@ text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.8)
   padding: 20px !important;
   font-size: large !important;
 }
+@media (max-width:600px) {
+  .movie_review_box{
+    max-width: 15rem !important;
+    background-color: #ccc !important;
+    border-radius: 6px !important;
+    padding: 5px !important;
 
+    font-size: 0.5rem !important;
+  }
+  
+}
+
+.movie_margin_review{
+  margin-top: 0.8rem !important;
+}
+@media (max-width:600px) {
+  .movie_margin_review{
+    margin-top: 0rem !important;
+  }
+  
+}
 @media (max-width: 600px) {
   .movie_review_box {
     max-width: 100% !important; /* Adjust to fit the screen width */
@@ -70,6 +103,20 @@ text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.8)
     padding-top: 4.4rem !important;
     border-radius: 5px !important;
     background-image: url('https://e0.pxfuel.com/wallpapers/235/160/desktop-wallpaper-grunge-film-strip-background-stock-graphy-7454192-film-reel.jpg');
+  }
+  
+}
+
+.movie_cover_pic{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+@media (max-width:600px) {
+  .movie_cover_pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
   }
   
 }

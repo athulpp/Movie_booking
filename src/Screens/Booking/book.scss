@@ -55,6 +55,18 @@
 
 }
 
+@media (max-width:600px) {
+    .seat-book{
+        text-align: center !important;
+        border: 1px solid #ccc !important;
+        background-color: yellow;
+        // margin: 1px !important;
+        padding: 1px !important;
+        font-size: 0.8rem !important;
+    }
+    
+}
+
 .seat-book-back1{
     background-color: #ccc;
 
@@ -71,11 +83,6 @@
     }
     
 }
-
-
-
-
-
 
 .seat_nonBook{
     // width:20% !important;

@@ -30,6 +30,9 @@ const HomeScreen = () => {
     navigate("/moviedes", { state: data });
   };
 
+  const handleImageClick = () => {
+    window.open('https://www.cricketworldcup.com/', '_blank');
+  };
   return (
     <div style={{ backgroundColor: "#ECF2FF" }}>
       <Header />
@@ -72,8 +75,10 @@ const HomeScreen = () => {
                     />
                   </div>
                   <Grid className="content-row_withoutPad space_between">
-                    <Typography className="font_subHeader_normal">{film.title}</Typography>
-                    <Typography  className="font-golden font_subHeader_bold">
+                    <Typography className="font_subHeader_normal">
+                      {film.title}
+                    </Typography>
+                    <Typography className="font-golden font_subHeader_bold">
                       {film.rating}
                     </Typography>
                   </Grid>
@@ -87,23 +92,25 @@ const HomeScreen = () => {
       {/* <Grid className="content-height"></Grid>
       <Grid className="content-height"></Grid> */}
       <Grid container xs={12}>
-          <Grid item xs={12} md={12} sm={12} className="content-row">
-            <Grid xs={1}></Grid>
-            <img
-              style={{
-                justifyContent: "center",
-                alignItems: "center",
-                maxWidth: "100%",
-                height: "auto",
-              }}
-              src={adv2}
-              alt="Ad Image"
-            />
-            <Grid xs={1}></Grid>
-          </Grid>
+        <Grid item xs={12} md={12} sm={12} className="content-row">
+          <Grid xs={1}></Grid>
+          <img 
+          onClick={()=>handleImageClick()}
+            style={{
+              cursor:"pointer",
+              justifyContent: "center",
+              alignItems: "center",
+              maxWidth: "100%",
+              height: "auto",
+            }}
+            src={adv2}
+            alt="Ad Image"
+          />
+          <Grid xs={1}></Grid>
         </Grid>
-        <Grid className="content-height"></Grid>
-      <Typography className="content-row" variant="h5">
+      </Grid>
+      <Grid className="content-height"></Grid>
+      <Typography className="content-row font_subHeader_bold" variant="h5">
         Our Partners
       </Typography>
       <Grid className="content-height"></Grid>
@@ -145,8 +152,8 @@ const HomeScreen = () => {
             width={50}
           />
         </Grid>
-        </Grid>
-        <Grid className="content-height"></Grid>
+      </Grid>
+      <Grid className="content-height"></Grid>
       <Footer />
     </div>
   );
