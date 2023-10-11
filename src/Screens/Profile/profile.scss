@@ -60,3 +60,9 @@
   .bill_pad_left{
     padding-left: 7.6rem;
   }
+  @media (max-width:600px) {
+    .bill_pad_left{
+        padding-left: 0.5rem;
+    }
+    
+  }

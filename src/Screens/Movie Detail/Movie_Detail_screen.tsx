@@ -41,13 +41,13 @@ const Movie_Detail_screen = () => {
         className="content-row movie_backgroundImage"
       >
         {/* Clear image on top */}
-        <Grid xs={6} sm={3} className="movie_movie_image">
+        <Grid xs={4} sm={4} md={4} lg={5} className="movie_movie_image">
           <img
             src={movieData?.image} className="movie_cover_pic"
             alt="Movie"
           />
         </Grid>
-        <Grid xs={6} sm={9}>
+        <Grid xs={8} sm={8} md={8} lg={7}>
           <div className="movie_header">
             <Typography className="font_header">{movieData?.title}</Typography>
             <Grid className="content-height"></Grid>

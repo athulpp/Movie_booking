@@ -56,7 +56,7 @@ dispatch(setFormData('theatreBill',data));
         <Grid className="content-height"></Grid>
         <Grid item xs={12} sm={6} md={4} lg={3} sx={{ border: "2px solid #ccc" }}>
   <div className="centered-image-container">
-    <img src={userDetails.image} height={100} width={100} alt="User" />
+    <img src={userDetails?.image} height={100} width={100} alt="User" />
   </div>
 
   <Typography variant="h4" className="content-row">
@@ -65,19 +65,19 @@ dispatch(setFormData('theatreBill',data));
   <Grid className="content-height"></Grid>
   <Grid className="content-row space_between">
     <Typography variant="h6">Name</Typography>
-    <Typography variant="h6">{userDetails.name}</Typography>
+    <Typography variant="h6">{userDetails?.name}</Typography>
   </Grid>
   <Grid className="content-row space_between">
     <Typography variant="h6">Last Name</Typography>
-    <Typography variant="h6">{userDetails.last_name}</Typography>
+    <Typography variant="h6">{userDetails?.last_name}</Typography>
   </Grid>
   <Grid className="content-row space_between">
     <Typography variant="h6">Email</Typography>
-    <Typography variant="h6">{userDetails.email}</Typography>
+    <Typography variant="h6">{userDetails?.email}</Typography>
   </Grid>
   <Grid className="content-row space_between">
     <Typography variant="h6">Phone</Typography>
-    <Typography variant="h6">{userDetails.phone}</Typography>
+    <Typography variant="h6">{userDetails?.phone}</Typography>
   </Grid>
 </Grid>
 
@@ -110,11 +110,11 @@ dispatch(setFormData('theatreBill',data));
                           <Grid container xs={12} sm={12} key={movie.movie}>
                             <Grid item xs={6} sm={6} className="content-row">
                               <Typography>Movie:</Typography>
-                              <Typography>{movie.movie}</Typography>
+                              <Typography>{movie?.movie}</Typography>
                             </Grid>
                             <Grid xs={6} sm={6} className="content-row">
                               <Typography>Date:</Typography>
-                              <Typography>{formatDate(movie.date)}</Typography>
+                              <Typography>{movie?.date&&formatDate(movie?.date)}</Typography>
                             </Grid>
                             <Grid className="content-height"></Grid>
                             <Grid
@@ -145,8 +145,8 @@ dispatch(setFormData('theatreBill',data));
                 return (
                   <div key={item.data[0].movie}>
                     <div className="profile_Movies_container profile_margin">
-                      <Typography>{item.data[0].movie}</Typography>
-                      <Typography>{item.data[0].date}</Typography>
+                      <Typography>{item?.data[0]?.movie}</Typography>
+                      <Typography>{item?.data[0]?.date}</Typography>
                       <Grid textAlign={"end"} sx={{ paddingRight: "5px" }}>
                             <ButtonComp
                               buttonName={"View"}

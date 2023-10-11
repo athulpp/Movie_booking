@@ -65,13 +65,11 @@ if(!userIsLoggedIn){
             </Grid>
           </div>
         </Grid>
-
         <Grid item xs={0} sm={1}></Grid>
-        <Grid item xs={12} sm={7} sx={{ border: "2px solid #ccc" }}>
+        <Grid item xs={12} sm={7} sx={{ border: "2px solid #ccc"}}>
           <Typography variant="h5" className="centered-image-container">
             Ticket Details
           </Typography>
-
           <Grid
             container
             xs={12}
