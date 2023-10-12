@@ -67,34 +67,23 @@ const Booking_Screen = () => {
   const userIsLoggedIn = useSelector(
     (state: any) => state?.userReducer.userIsLoggedIn
   );
+  const movieId = location.state.id;
+  const movieInRedux = useSelector((state: any) => state?.form[`movie_${movieId}`]);
+  console.log(movieInRedux,'movie in the redux state');
+  
   useEffect(() => {
     if (!userIsLoggedIn) {
       navigate("/");
     }
-    const localStorageKey = `movie_${location.state.id}`;
-
-    // Get the existing movie data from local storage
-    const storedMovieData = sessionStorage.getItem(localStorageKey);
-
-    if (storedMovieData) {
-      // If movie data exists, parse it and get the booked seats
-      const parsedMovieData = JSON.parse(storedMovieData);
-      const bookedSeats = parsedMovieData.seats.filter(
-        (seat: any) => seat.status === "booked"
-      );
-
+    if(movieInRedux){
+      const bookedSeats=movieInRedux.seats.filter((seat:any)=>seat.status=='booked');
       setSelectedSeats(bookedSeats);
-      console.log(bookedSeats, "booked seats");
+      console.log(bookedSeats,'booked seats check first');
     }
-  }, [location.state.id]);
+  }, [location?.state?.id]);
 
   const handleSeatClick = (seat: any) => {
-    // Check if the seat is already booked in local storage
-    const localStorageKey = `movie_${location.state.id}`;
-    const storedMovieData = JSON.parse(
-      sessionStorage.getItem(localStorageKey) || "{}"
-    );
-    const isSeatBooked = storedMovieData?.seats?.some(
+    const isSeatBooked = movieInRedux?.seats?.some(
       (s: any) => s.id === seat.id && s.status === "booked"
     );
 
@@ -121,15 +110,10 @@ const Booking_Screen = () => {
   };
 
   const handleBooking = () => {
-    const localStorageKey = `movie_${location.state.id}`;
 
-    const storedMovieData = sessionStorage.getItem(localStorageKey);
     let updatedMovieData = location.state;
 
-    if (storedMovieData) {
-      const parsedMovieData = JSON.parse(storedMovieData);
-
-      // Update the seat status in the parsed movie data
+    if (movieInRedux) {
       updatedMovieData.seats.forEach((seat: any) => {
         const updatedSeat = selectedSeats.find(
           (selectedSeat) => selectedSeat.id === seat.id
@@ -149,12 +133,10 @@ const Booking_Screen = () => {
           seat.status = "booked";
         }
       });
-      // If there's no existing data, set the initial data to the current state
-      sessionStorage.setItem(localStorageKey, JSON.stringify(updatedMovieData));
+      const movieId = location.state.id;
+      dispatch(setFormData(`movie_${movieId}`,updatedMovieData));
     }
-
-    // Save the updated movie data to local storage
-    sessionStorage.setItem(localStorageKey, JSON.stringify(updatedMovieData));
+    dispatch(setFormData(`movie_${movieId}`,updatedMovieData))
     const selectedElements = selectedSeats.slice(-ticketCount!);
     console.log(selectedElements, "selected Elements");
     const filmList = {
@@ -188,10 +170,10 @@ const Booking_Screen = () => {
         <Grid container xs={12} className="content-row book_screen_full">
           <Grid item xs={12} sm={12} md={12} className="booking_margin">
             <Typography className="font_header">
-              {location.state.title}
+              {location?.state?.title}
             </Typography>
             <Grid className="content-height"></Grid>
-            <img src={location.state.image} height={250} width={200} />
+            <img src={location?.state?.image} height={250} width={200} />
             <Grid className="content-height"></Grid>
             <Typography className="font_regular_12px">
               screen is here
@@ -200,13 +182,13 @@ const Booking_Screen = () => {
           <Grid className="content-height"></Grid>
         </Grid>
         <Grid container className="booking_seats_container ">
-          {location.state.seats.map((seat: any, index: number) => (
+          {location?.state?.seats.map((seat: any, index: number) => (
             <Grid item className="booking_margin_seats" key={index}>
               <Box
                 onClick={() => handleSeatClick(seat)}
                 className={`seat-book ${
                   selectedSeats.some(
-                    (selectedSeat) => selectedSeat.id === seat.id
+                    (selectedSeat) => selectedSeat?.id === seat?.id
                   )
                     ? "selected-seat font_regular_12px"
                     : "seat_nonBook font_regular_12px"
@@ -300,7 +282,6 @@ const Booking_Screen = () => {
                   sx={{ paddingTop: "10px" }}
                 >
                   <Grid xs={6}>
-                    {" "}
                     <Typography
                       className="container_right_padding"
                       variant="h6"
@@ -308,9 +289,7 @@ const Booking_Screen = () => {
                       Tax
                     </Typography>
                   </Grid>
-
                   <Grid xs={6}>
-                    {" "}
                     <Typography
                       className="container_right_padding"
                       variant="h6"
@@ -325,7 +304,6 @@ const Booking_Screen = () => {
                   sx={{ paddingTop: "10px" }}
                 >
                   <Grid xs={6}>
-                    {" "}
                     <Typography
                       className="container_right_padding"
                       variant="h6"
@@ -333,9 +311,7 @@ const Booking_Screen = () => {
                       Total
                     </Typography>
                   </Grid>
-
                   <Grid xs={6}>
-                    {" "}
                     <Typography
                       className="container_right_padding"
                       variant="h6"
@@ -347,7 +323,7 @@ const Booking_Screen = () => {
               </Grid>
               <Grid item xs={6} sm={6} sx={{ paddingTop: "10px" }}>
                 <img
-                  src={location.state.image}
+                  src={location?.state?.image}
                   alt="Movie Poster"
                   width={100}
                 />
