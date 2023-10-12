@@ -30,7 +30,7 @@ const Movie_Detail_screen = () => {
     navigate("/seatbook", { state: location.state });
   };
   return (
-    <Grid container>
+    <Grid >
       <Header />
       <Grid className="content-height"></Grid>
       <Grid

@@ -11,6 +11,8 @@ import {
   ListItemText,
   Grid,
   useMediaQuery,
+  Box,
+  useTheme,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import movieLogo from '../Assests/image/3I9xJ0Mrmv.gif';
@@ -22,7 +24,8 @@ const Header = () => {
   const userDetails = useSelector((state:any) => state.form?.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isSmallScreen = useMediaQuery('(max-width:600px)'); 
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const theme = useTheme();
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -37,36 +40,41 @@ const Header = () => {
 
   const drawerContent = (
     <List>
-      <ListItem button onClick={() => Logout()}>
+      <ListItem button onClick={Logout}>
         <ListItemText primary="Logout" />
       </ListItem>
-      <ListItem onClick={()=>navigate('/profile')}>
-        <ListItemText primary="profile"></ListItemText>
+      <ListItem button onClick={() => navigate('/profile')}>
+        <ListItemText primary="Profile" />
       </ListItem>
     </List>
   );
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: 'black' }}>
+      <AppBar position="static" sx={{ backgroundColor:"black"  }}>
         <Toolbar>
-          <Grid container alignItems="center">
-            {isSmallScreen? <Grid item xs={2} sm={1}>
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                onClick={() => toggleDrawer()}
-              >
-                <MenuIcon />
-              </IconButton>
-            </Grid>:<Grid></Grid>}
-           
+          <Grid container alignItems="center" className='content-row'>
             <Grid item xs={2} sm={1}>
-              <img height={50} src={movieLogo} />
+              {isSmallScreen && (
+                <IconButton
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  onClick={toggleDrawer}
+                >
+                  <MenuIcon />
+                </IconButton>
+              )}
+            </Grid>
+            <Grid item xs={2} sm={1}>
+              <img height={50} src={movieLogo} alt="Movie Logo" />
             </Grid>
             <Grid item xs={4} sm={5}>
-              <Typography className="font_ShopName" variant="h5" onClick={()=>navigate('/home')}>
+              <Typography
+                className="font_ShopName"
+                variant="h5"
+                onClick={() => navigate('/home')}
+              >
                 Cinema Gate
               </Typography>
             </Grid>
@@ -76,13 +84,14 @@ const Header = () => {
                   <Typography
                     className="content-left-padding underline-on-hover"
                     variant="h5"
-                onClick={()=>navigate('/profile')}
+                    onClick={() => navigate('/profile')}
                   >
-                    {`Hello ${' '} ${userDetails?.name}`}
+                    {`Hello ${userDetails?.name}`}
                   </Typography>
+                  
                 </Grid>
-                <Grid item xs={2} sm={2} >
-                  <Button color="inherit" onClick={() => Logout()}>
+                <Grid item xs={0} sm={1}>
+                  <Button color="inherit" onClick={Logout}>
                     Logout
                   </Button>
                 </Grid>
@@ -91,7 +100,7 @@ const Header = () => {
           </Grid>
         </Toolbar>
       </AppBar>
-      <Drawer anchor="left" open={isDrawerOpen} onClose={() => toggleDrawer()}>
+      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
         {drawerContent}
       </Drawer>
     </>
