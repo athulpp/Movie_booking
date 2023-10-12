@@ -7,10 +7,11 @@ import Footer from "../../Common/Footer";
 import ButtonComp from "../../Common/Input/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { setFormData } from "../../Redux/actions";
-import { formatDate } from "../../Common/date_conversion";
+import { formatDate, formatTime } from "../../Common/date_conversion";
+import empty from "../../Assests/image/techny-empty-clipboard.png";
 
 const Booke_show = () => {
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const bookList = useSelector((state: any) => state?.bookedList.dataArray);
   // const bookList = [...originalBookList].slice().reverse();
@@ -41,134 +42,186 @@ const Booke_show = () => {
     );
   };
 
-  const navigateDetails=(data:any)=>{
-console.log(data,'vvvvvvvvvvv');
-navigate('/storebill',{state:data});
-dispatch(setFormData('theatreBill',data));
-
-  }
+  const navigateDetails = (data: any) => {
+    // console.log(data,'vvvvvvvvvvv');
+    navigate("/storebill", { state: data });
+    dispatch(setFormData("theatreBill", data));
+  };
 
   return (
     <div>
       <Header />
       <Grid className="content-height"></Grid>
+      <Typography variant="h4" className="content-row font_header">
+        Profile
+      </Typography>
       <Grid container xs={12} sm={12} md={12} className="profile_margin">
         <Grid className="content-height"></Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} sx={{ border: "2px solid #ccc" }}>
-  <div className="centered-image-container">
-    <img src={userDetails?.image} height={100} width={100} alt="User" />
-  </div>
-
-  <Typography variant="h4" className="content-row">
-    Profile
-  </Typography>
-  <Grid className="content-height"></Grid>
-  <Grid className="content-row space_between">
-    <Typography variant="h6">Name</Typography>
-    <Typography variant="h6">{userDetails?.name}</Typography>
-  </Grid>
-  <Grid className="content-row space_between">
-    <Typography variant="h6">Last Name</Typography>
-    <Typography variant="h6">{userDetails?.last_name}</Typography>
-  </Grid>
-  <Grid className="content-row space_between">
-    <Typography variant="h6">Email</Typography>
-    <Typography variant="h6">{userDetails?.email}</Typography>
-  </Grid>
-  <Grid className="content-row space_between">
-    <Typography variant="h6">Phone</Typography>
-    <Typography variant="h6">{userDetails?.phone}</Typography>
-  </Grid>
-</Grid>
 
         <Grid
           item
-          xs={1}
-          sm={1}
-          textAlign={"center"}
-          justifyContent={"center"}
-          alignContent={"center"}
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}
+          sx={{ border: "2px solid #ccc", borderRadius: "10px" }}
         >
-          <>
-            <div>{ArrowList()}</div>
-            <div> Ticket List</div>
-            <div>{ArrowList()}</div>
-          </>
+          <div className="centered-image-container">
+            <img src={userDetails?.image} height={100} width={100} alt="User" />
+          </div>
+          <Grid className="content-height"></Grid>
+          <Grid className="content-row space_between">
+            <Typography className="font_regular_12px">Name</Typography>
+            <Typography className="font_regular_12px">
+              {userDetails?.name}
+            </Typography>
+          </Grid>
+          <Grid className="common_line_height"></Grid>
+          <Grid className="content-row space_between">
+            <Typography className="font_regular_12px">Last Name</Typography>
+            <Typography className="font_regular_12px">
+              {userDetails?.last_name}
+            </Typography>
+          </Grid>
+          <Grid className="common_line_height"></Grid>
+          <Grid className="content-row space_between">
+            <Typography className="font_regular_12px">Email</Typography>
+            <Typography className="font_regular_12px">
+              {userDetails?.email}
+            </Typography>
+          </Grid>
+          <Grid className="common_line_height"></Grid>
+          <Grid className="content-row space_between">
+            <Typography className="font_regular_12px">Phone</Typography>
+            <Typography className="font_regular_12px">
+              {userDetails?.phone}
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={11} sm={7} className="scrollable-content-right">
-          {bookList.map((item: any) => {
-            if (item.key === userDetails.id) {
-              if (item.data.length > 1) {
-                return (
-                  <div className="" key={item.movie}>
-                    {item.data
-                      .slice()
-                      .reverse()
-                      .map((movie: any, index: number) => (
-                        <div className="profile_Movies_container">
-                          <Grid className="content-height"></Grid>
-                          <Grid container xs={12} sm={12} key={movie.movie}>
-                            <Grid item xs={6} sm={6} className="content-row">
-                              <Typography>Movie:</Typography>
-                              <Typography>{movie?.movie}</Typography>
-                            </Grid>
-                            <Grid xs={6} sm={6} className="content-row">
-                              <Typography>Date:</Typography>
-                              <Typography>{movie?.date&&formatDate(movie?.date)}</Typography>
-                            </Grid>
+
+        {bookList.length != 0 && (
+          <Grid
+            item
+            xs={1}
+            sm={1}
+            textAlign={"center"}
+            justifyContent={"center"}
+            alignContent={"center"}
+          >
+            <>
+              <div>{ArrowList()}</div>
+              <div> Ticket List</div>
+              <div>{ArrowList()}</div>
+            </>
+          </Grid>
+        )}
+        {bookList.length != 0 ? (
+          <Grid item xs={11} sm={7} className="scrollable-content-right">
+            {bookList.map((item: any) => {
+              if (item.key === userDetails.id) {
+                if (item.data.length > 1) {
+                  return (
+                    <div className="" key={item.movie}>
+                      {item.data
+                        .slice()
+                        .reverse()
+                        .map((movie: any, index: number) => (
+                          <div className="profile_Movies_container">
                             <Grid className="content-height"></Grid>
+                            <Grid container xs={12} sm={12} key={movie.movie}>
+                              <Grid item xs={6} sm={6} className="content-row">
+                                <Typography>Movie:</Typography>
+                                <Typography>{movie?.movie}</Typography>
+                              </Grid>
+                              <Grid xs={6} sm={6} className="content-row">
+                                <Typography>Date:</Typography>
+                                <Typography>
+                                  {movie?.date && formatDate(movie?.date)}
+                                </Typography>
+                              </Grid>
+                              <Grid className="content-height"></Grid>
+                              <Grid
+                                item
+                                xs={6}
+                                sm={6}
+                                className="content-row"
+                              ></Grid>
+                            </Grid>
                             <Grid
-                              item
-                              xs={6}
-                              sm={6}
-                              className="content-row"
-                            ></Grid>
-                          </Grid>
-                          <Grid textAlign={"end"} sx={{ paddingRight: "5px" }}>
-                            <ButtonComp
-                              buttonName={"View"}
-                              type={"submit"}
-                              variant={"contained"}
-                              customStyle={{
-                                backgroundColor: "red",
-                                color: "white",
-                                borderRadius: "15px",
-                              }}
-                              onClick={() => navigateDetails(movie)}
-                            />
-                          </Grid>
-                        </div>
-                      ))}
-                  </div>
-                );
-              } else {
-                return (
-                  <div key={item.data[0].movie}>
-                    <div className="profile_Movies_container profile_margin">
-                      <Typography>{item?.data[0]?.movie}</Typography>
-                      <Typography>{item?.data[0]?.date}</Typography>
-                      <Grid textAlign={"end"} sx={{ paddingRight: "5px" }}>
-                            <ButtonComp
-                              buttonName={"View"}
-                              type={"submit"}
-                              variant={"contained"}
-                              customStyle={{
-                                backgroundColor: "red",
-                                color: "white",
-                                borderRadius: "15px",
-                              }}
-                              onClick={() => navigateDetails(item.data[0])}
-                            />
-                          </Grid>
+                              textAlign={"end"}
+                              sx={{ paddingRight: "5px" }}
+                            >
+                              <ButtonComp
+                                buttonName={"View"}
+                                type={"submit"}
+                                variant={"contained"}
+                                customStyle={{
+                                  backgroundColor: "red",
+                                  color: "white",
+                                  borderRadius: "15px",
+                                }}
+                                onClick={() => navigateDetails(movie)}
+                              />
+                            </Grid>
+                          </div>
+                        ))}
                     </div>
-                  </div>
-                );
+                  );
+                } else {
+                  return (
+                    <div key={item.data[0].movie} className="profile_margin">
+                      <div className="profile_Movies_container profile_margin">
+                        <Grid item xs={6} sm={6} className="content-row">
+                          <Typography>Movie:</Typography>
+                          <Typography>{item?.data[0]?.movie}</Typography>
+                        </Grid>
+                        <Grid item xs={8} sm={6} className="content-row">
+                          <Typography>Date:</Typography>
+                          <Typography>
+                            {formatDate(item?.data[0]?.date)}
+                          </Typography>
+                        </Grid>
+
+                        {/* <Typography>{item?.data[0]?.movie}</Typography>
+                        <Typography>{item?.data[0]?.date}</Typography> */}
+                        <Grid textAlign={"end"} sx={{ paddingRight: "5px" }}>
+                          <ButtonComp
+                            buttonName={"View"}
+                            type={"submit"}
+                            variant={"contained"}
+                            customStyle={{
+                              backgroundColor: "red",
+                              color: "white",
+                              borderRadius: "15px",
+                            }}
+                            onClick={() => navigateDetails(item.data[0])}
+                          />
+                        </Grid>
+                      </div>
+                    </div>
+                  );
+                }
               }
-            }
-            return null;
-          })}
-        </Grid>
+              return null;
+            })}
+          </Grid>
+        ) : (
+          <Grid item xs={11} sm={7} className="book-booklist_empty">
+            <Grid>Your Booking List is Empty</Grid>
+            <Grid>
+              <img src={empty} height={150} width={150} />
+            </Grid>
+          </Grid>
+        )}
       </Grid>
+      {bookList.length == 0 && (
+        <>
+          <Grid className="content-height"></Grid>
+          <Grid className="content-height"></Grid>
+          <Grid className="content-height"></Grid>
+        </>
+      )}
+
       <Footer />
     </div>
   );

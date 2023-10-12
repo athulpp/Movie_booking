@@ -8,3 +8,7 @@ export function getCurrentDateTime() {
     
     return moment(data).format("YYYY-MM-DD");
   }
+
+  export function formatTime(data:any){
+    return moment(data).format("HH:mm:ss");
+  }
