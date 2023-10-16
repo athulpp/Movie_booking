@@ -4039,6 +4039,2124 @@
                 ]
               }
           ]
+        },
+        {
+          "id": 3,
+          "name": "Sageetha Film City",
+          "address": "Padannapalam, Kannur, Kerala 670014",
+          "contact_number": "98538-24567",
+          "image":"https://cdn.citymapia.com/kochi/sangeetha-theatre/2898/businessbanner.jpg",
+          "capacity":"50 seats",
+          "films": [
+            {
+              "id": 20,
+              "title": "Master",
+              "genre":"Animation",
+              "duration":"2:15 hr",
+              "type":"2D",
+              "rating":4.5,
+              "des":"After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery. After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery",
+              "image": "https://i10.behindwoods.com/tamil-movies/master-tamil/images/thumbnails/master-tamil-review.jpg",
+              "seats": [
+                {
+                  "id": 1,
+                  "seatNumber": "A1",
+                  "status": "available"
+                },
+                {
+                  "id": 2,
+                  "seatNumber": "A2",
+                  "status": "available"
+                },
+                {
+                  "id": 3,
+                  "seatNumber": "A3",
+                  "status": "available"
+                },
+                {
+                    "id":4,
+                    "seatNumber":"A4",
+                    "status":"available"
+                },
+                {
+                    "id":5,
+                    "seatNumber":"A5",
+                    "status":"available"
+                },
+                {
+                    "id":6,
+                    "seatNumber":"A6",
+                    "status":"available"
+                },
+                {
+                    "id":7,
+                    "seatNumber":"A7",
+                    "status":"available"
+                },
+                {
+                    "id":8,
+                    "seatNumber":"A8",
+                    "status":"available"
+                },
+                {
+                    "id":9,
+                    "seatNumber":"A9",
+                    "status":"available"
+                },
+                {
+                    "id":10,
+                    "seatNumber":"A10",
+                    "status":"available"
+                },
+                {
+                    "id":11,
+                    "seatNumber":"A11",
+                    "status":"available"
+                },
+                  {
+                    "id":12,
+                    "seatNumber":"A12",
+                    "status":"available"
+                },
+                {
+                    "id":13,
+                    "seatNumber":"A13",
+                    "status":"available"
+                },
+                {
+                    "id":14,
+                    "seatNumber":"A14",
+                    "status":"available"
+                },
+                {
+                    "id":15,
+                    "seatNumber":"A15",
+                    "status":"available"
+                },
+                {
+                    "id":16,
+                    "seatNumber":"A16",
+                    "status":"available"
+                },
+                {
+                    "id":17,
+                    "seatNumber":"A17",
+                    "status":"available"
+                },
+                {
+                    "id":18,
+                    "seatNumber":"A18",
+                    "status":"available"
+                },
+                {
+                    "id":19,
+                    "seatNumber":"A19",
+                    "status":"available"
+                },
+                {
+                    "id":20,
+                    "seatNumber":"A20",
+                    "status":"available"
+                },
+                {
+                    "id":21,
+                    "seatNumber":"A21",
+                    "status":"available"
+                },
+                {
+                    "id":22,
+                    "seatNumber":"A22",
+                    "status":"available"
+                },
+                {
+                    "id":23,
+                    "seatNumber":"A23",
+                    "status":"available"
+                },
+                {
+                    "id":24,
+                    "seatNumber":"A24",
+                    "status":"available"
+                },
+                {
+                    "id":25,
+                    "seatNumber":"A25",
+                    "status":"available"
+                },
+                {
+                    "id":26,
+                    "seatNumber":"A26",
+                    "status":"available"
+                },
+                {
+                    "id":27,
+                    "seatNumber":"A27",
+                    "status":"available"
+                },
+                {
+                    "id":28,
+                    "seatNumber":"A28",
+                    "status":"available"
+                },
+                {
+                    "id":29,
+                    "seatNumber":"A29",
+                    "status":"available"
+                },
+                {
+                    "id":30,
+                    "seatNumber":"A30",
+                    "status":"available"
+                },   
+                {
+                    "id":31,
+                    "seatNumber":"A31",
+                    "status":"available"
+                },
+                {
+                    "id":32,
+                    "seatNumber":"A32",
+                    "status":"available"
+                },
+                {
+                    "id":33,
+                    "seatNumber":"A33",
+                    "status":"available"
+                },
+                {
+                    "id":34,
+                    "seatNumber":"A34",
+                    "status":"available"
+                },
+                {
+                    "id":35,
+                    "seatNumber":"A35",
+                    "status":"available"
+                },
+                {
+                    "id":36,
+                    "seatNumber":"A36",
+                    "status":"available"
+                },
+                {
+                    "id":37,
+                    "seatNumber":"A38",
+                    "status":"available"
+                },
+
+                {
+                    "id":38,
+                    "seatNumber":"A38",
+                    "status":"available"
+                },
+                {
+                    "id":39,
+                    "seatNumber":"A39",
+                    "status":"available"
+                },
+                {
+                    "id":40,
+                    "seatNumber":"A40",
+                    "status":"available"
+                },
+                {
+                    "id":41,
+                    "seatNumber":"A41",
+                    "status":"available"
+                },
+                {
+                    "id":42,
+                    "seatNumber":"A42",
+                    "status":"available"
+                },
+                {
+                    "id":43,
+                    "seatNumber":"A43",
+                    "status":"available"
+                },
+                {
+                    "id":44,
+                    "seatNumber":"A44",
+                    "status":"available"
+                },
+                {
+                    "id":45,
+                    "seatNumber":"A45",
+                    "status":"available"
+                },
+                {
+                    "id":46,
+                    "seatNumber":"A46",
+                    "status":"available"
+                },
+                {
+                    "id":47,
+                    "seatNumber":"A47",
+                    "status":"available"
+                },
+                {
+                    "id":48,
+                    "seatNumber":"A48",
+                    "status":"available"
+                },
+                {
+                    "id":49,
+                    "seatNumber":"A49",
+                    "status":"available"
+                },
+                {
+                    "id":50,
+                    "seatNumber":"A50",
+                    "status":"available"
+                }
+              ]
+            },
+            {
+              "id": 21,
+              "genre":"Drama/mental",
+              "rating":3.5,   
+              "title": "Sulthan",
+              "duration":"2:55 hr",
+              "type":"2D",
+              "des":"Tony Stark is the wealthy son of industrialist and weapons manufacturer Howard Stark and his wife, Maria. Tony grew up a genius with a brilliant mind for technology and inventions and, naturally, followed in his father's footsteps, inheriting Stark Industries upon his parents' untimely death.",
+              "image": "https://wallpapercave.com/wp/wp8812707.jpg",
+              "seats": [
+                {
+                  "id": 1,
+                  "seatNumber": "B1",
+                  "status": "available"
+                },
+                {
+                  "id": 2,
+                  "seatNumber": "B2",
+                  "status": "available"
+                },
+                {
+                  "id": 3,
+                  "seatNumber": "B3",
+                  "status": "available"
+                },
+             
+                {
+                    "id": 4,
+                    "seatNumber": "B4",
+                    "status": "available"
+                  },
+                  {
+                    "id": 5,
+                    "seatNumber": "B5",
+                    "status": "available"
+                  },
+                  {
+                    "id": 6,
+                    "seatNumber": "B6",
+                    "status": "available"
+                  },
+                  {
+                    "id": 7,
+                    "seatNumber": "B7",
+                    "status": "available"
+                  },
+                  {
+                    "id": 8,
+                    "seatNumber": "B8",
+                    "status": "available"
+                  },
+                  {
+                    "id": 9,
+                    "seatNumber": "B9",
+                    "status": "available"
+                  },
+                  {
+                    "id": 10,
+                    "seatNumber": "B10",
+                    "status": "available"
+                  },
+                  {
+                    "id": 11,
+                    "seatNumber": "B11",
+                    "status": "available"
+                  },
+                  {
+                    "id": 12,
+                    "seatNumber": "B12",
+                    "status": "available"
+                  },
+                  {
+                    "id": 13,
+                    "seatNumber": "B13",
+                    "status": "available"
+                  },
+                  {
+                    "id": 14,
+                    "seatNumber": "B14",
+                    "status": "available"
+                  },
+                  {
+                    "id": 15,
+                    "seatNumber": "B15",
+                    "status": "available"
+                  },
+                  {
+                    "id": 16,
+                    "seatNumber": "B16",
+                    "status": "available"
+                  },
+                  {
+                    "id": 17,
+                    "seatNumber": "B17",
+                    "status": "available"
+                  },
+                  {
+                    "id": 18,
+                    "seatNumber": "B18",
+                    "status": "available"
+                  },
+                  {
+                    "id": 19,
+                    "seatNumber": "B19",
+                    "status": "available"
+                  },
+                  {
+                    "id": 20,
+                    "seatNumber": "B20",
+                    "status": "available"
+                  },
+                  {
+                    "id": 21,
+                    "seatNumber": "B21",
+                    "status": "available"
+                  },
+                  {
+                    "id": 22,
+                    "seatNumber": "B22",
+                    "status": "available"
+                  },
+                  {
+                    "id": 23,
+                    "seatNumber": "B23",
+                    "status": "available"
+                  },
+                  {
+                    "id": 24,
+                    "seatNumber": "B24",
+                    "status": "available"
+                  },
+                  {
+                    "id": 25,
+                    "seatNumber": "B25",
+                    "status": "available"
+                  },
+                  {
+                    "id": 26,
+                    "seatNumber": "B26",
+                    "status": "available"
+                  },
+                  {
+                    "id": 27,
+                    "seatNumber": "B27",
+                    "status": "available"
+                  },
+                  {
+                    "id": 28,
+                    "seatNumber": "B28",
+                    "status": "available"
+                  },
+                  {
+                    "id": 29,
+                    "seatNumber": "B29",
+                    "status": "available"
+                  },
+                  {
+                    "id": 30,
+                    "seatNumber": "B30",
+                    "status": "available"
+                  },
+                  {
+                    "id": 31,
+                    "seatNumber": "B31",
+                    "status": "available"
+                  },
+                  {
+                    "id": 32,
+                    "seatNumber": "B32",
+                    "status": "available"
+                  },
+                  {
+                    "id": 33,
+                    "seatNumber": "B33",
+                    "status": "available"
+                  },
+                  {
+                    "id": 34,
+                    "seatNumber": "B34",
+                    "status": "available"
+                  },
+                  {
+                    "id": 35,
+                    "seatNumber": "B35",
+                    "status": "available"
+                  },
+                  {
+                    "id": 36,
+                    "seatNumber": "B36",
+                    "status": "available"
+                  },
+                  {
+                    "id": 37,
+                    "seatNumber": "B37",
+                    "status": "available"
+                  },
+                  {
+                    "id": 38,
+                    "seatNumber": "B38",
+                    "status": "available"
+                  },
+                  {
+                    "id": 39,
+                    "seatNumber": "B39",
+                    "status": "available"
+                  },
+                  {
+                    "id": 40,
+                    "seatNumber": "B41",
+                    "status": "available"
+                  },
+                  {
+                    "id": 41,
+                    "seatNumber": "B11",
+                    "status": "available"
+                  },
+                  {
+                    "id": 42,
+                    "seatNumber": "B42",
+                    "status": "available"
+                  },
+                  {
+                    "id": 43,
+                    "seatNumber": "B43",
+                    "status": "available"
+                  },
+                  {
+                    "id": 44,
+                    "seatNumber": "B44",
+                    "status": "available"
+                  },
+                  {
+                    "id": 45,
+                    "seatNumber": "B45",
+                    "status": "available"
+                  },
+                  {
+                    "id": 46,
+                    "seatNumber": "B46",
+                    "status": "available"
+                  },
+                  {
+                    "id": 47,
+                    "seatNumber": "B47",
+                    "status": "available"
+                  },
+                  {
+                    "id": 48,
+                    "seatNumber": "B48",
+                    "status": "available"
+                  },
+                  {
+                    "id": 49,
+                    "seatNumber": "B49",
+                    "status": "available"
+                  },
+                  {
+                    "id": 50,
+                    "seatNumber": "B50",
+                    "status": "available"
+                  }
+              ]
+            },
+            {
+                "id": 22,
+                "title": "Jailer",
+                "genre":"Drama/True story",
+                "rating":4.8,
+                "duration":"2:55 hr",
+                "type":"2D",
+                "des":"Captain America's civilian identity is Steve Rogers, a frail man enhanced to the peak of human physical perfection by an experimental super-soldier serum after joining the United States Army to aid the country's efforts in World War II.",
+                "image": "https://st1.bollywoodlife.com/wp-content/uploads/2023/08/ja-1.jpg?impolicy=Medium_Resize&w=720&h=960",
+                "seats": [
+                    {
+                        "id": 1,
+                        "seatNumber": "A1",
+                        "status": "available"
+                      },
+                      {
+                        "id": 2,
+                        "seatNumber": "A2",
+                        "status": "available"
+                      },
+                      {
+                        "id": 3,
+                        "seatNumber": "A3",
+                        "status": "available"
+                      },
+                      {
+                          "id":4,
+                          "seatNumber":"A4",
+                          "status":"available"
+                      },
+                      {
+                          "id":5,
+                          "seatNumber":"A5",
+                          "status":"available"
+                      },
+                      {
+                          "id":6,
+                          "seatNumber":"A6",
+                          "status":"available"
+                      },
+                      {
+                          "id":7,
+                          "seatNumber":"A7",
+                          "status":"available"
+                      },
+                      {
+                          "id":8,
+                          "seatNumber":"A8",
+                          "status":"available"
+                      },
+                      {
+                          "id":9,
+                          "seatNumber":"A9",
+                          "status":"available"
+                      },
+                      {
+                          "id":10,
+                          "seatNumber":"A10",
+                          "status":"available"
+                      },
+                      {
+                          "id":11,
+                          "seatNumber":"A11",
+                          "status":"available"
+                      },
+                        {
+                          "id":12,
+                          "seatNumber":"A12",
+                          "status":"available"
+                      },
+                      {
+                          "id":13,
+                          "seatNumber":"A13",
+                          "status":"available"
+                      },
+                      {
+                          "id":14,
+                          "seatNumber":"A14",
+                          "status":"available"
+                      },
+                      {
+                          "id":15,
+                          "seatNumber":"A15",
+                          "status":"available"
+                      },
+                      {
+                          "id":16,
+                          "seatNumber":"A16",
+                          "status":"available"
+                      },
+                      {
+                          "id":17,
+                          "seatNumber":"A17",
+                          "status":"available"
+                      },
+                      {
+                          "id":18,
+                          "seatNumber":"A18",
+                          "status":"available"
+                      },
+                      {
+                          "id":19,
+                          "seatNumber":"A19",
+                          "status":"available"
+                      },
+                      {
+                          "id":20,
+                          "seatNumber":"A20",
+                          "status":"available"
+                      },
+                      {
+                          "id":21,
+                          "seatNumber":"A21",
+                          "status":"available"
+                      },
+                      {
+                          "id":22,
+                          "seatNumber":"A22",
+                          "status":"available"
+                      },
+                      {
+                          "id":23,
+                          "seatNumber":"A23",
+                          "status":"available"
+                      },
+                      {
+                          "id":24,
+                          "seatNumber":"A24",
+                          "status":"available"
+                      },
+                      {
+                          "id":25,
+                          "seatNumber":"A25",
+                          "status":"available"
+                      },
+                      {
+                          "id":26,
+                          "seatNumber":"A26",
+                          "status":"available"
+                      },
+                      {
+                          "id":27,
+                          "seatNumber":"A27",
+                          "status":"available"
+                      },
+                      {
+                          "id":28,
+                          "seatNumber":"A28",
+                          "status":"available"
+                      },
+                      {
+                          "id":29,
+                          "seatNumber":"A29",
+                          "status":"available"
+                      },
+                      {
+                          "id":30,
+                          "seatNumber":"A30",
+                          "status":"available"
+                      },   
+                      {
+                          "id":31,
+                          "seatNumber":"A31",
+                          "status":"available"
+                      },
+                      {
+                          "id":32,
+                          "seatNumber":"A32",
+                          "status":"available"
+                      },
+                      {
+                          "id":33,
+                          "seatNumber":"A33",
+                          "status":"available"
+                      },
+                      {
+                          "id":34,
+                          "seatNumber":"A34",
+                          "status":"available"
+                      },
+                      {
+                          "id":35,
+                          "seatNumber":"A35",
+                          "status":"available"
+                      },
+                      {
+                          "id":36,
+                          "seatNumber":"A36",
+                          "status":"available"
+                      },
+                      {
+                          "id":37,
+                          "seatNumber":"A38",
+                          "status":"available"
+                      },
+      
+                      {
+                          "id":38,
+                          "seatNumber":"A38",
+                          "status":"available"
+                      },
+                      {
+                          "id":39,
+                          "seatNumber":"A39",
+                          "status":"available"
+                      },
+                      {
+                          "id":40,
+                          "seatNumber":"A40",
+                          "status":"available"
+                      },
+                      {
+                          "id":41,
+                          "seatNumber":"A41",
+                          "status":"available"
+                      },
+                      {
+                          "id":42,
+                          "seatNumber":"A42",
+                          "status":"available"
+                      },
+                      {
+                          "id":43,
+                          "seatNumber":"A43",
+                          "status":"available"
+                      },
+                      {
+                          "id":44,
+                          "seatNumber":"A44",
+                          "status":"available"
+                      },
+                      {
+                          "id":45,
+                          "seatNumber":"A45",
+                          "status":"available"
+                      },
+                      {
+                          "id":46,
+                          "seatNumber":"A46",
+                          "status":"available"
+                      },
+                      {
+                          "id":47,
+                          "seatNumber":"A47",
+                          "status":"available"
+                      },
+                      {
+                          "id":48,
+                          "seatNumber":"A48",
+                          "status":"available"
+                      },
+                      {
+                          "id":49,
+                          "seatNumber":"A49",
+                          "status":"available"
+                      },
+                      {
+                          "id":50,
+                          "seatNumber":"A50",
+                          "status":"available"
+                      }
+  
+                ]
+              },
+              {
+                "id": 23,
+                "title": "Sardar",
+                "genre":"Drama/True story",
+                "rating":5.0,
+                "duration":"1:45 hr",
+                "type":"2D",
+                "des":"Ant-Man is a legacy super-hero name, primarily associated with the ability to shrink in size. The original was Hank Pym; he was a founding member of the Avengers. Scott Lang took the name, an ex-con who broke into the New Jersey home of Dr. Henry Pym, and stole the Ant-Man's Suit",
+                "image": "https://upload.wikimedia.org/wikipedia/en/8/80/Sardar_2022_poster.jpg",
+                "seats": [
+                    {
+                        "id": 1,
+                        "seatNumber": "B1",
+                        "status": "available"
+                      },
+                      {
+                        "id": 2,
+                        "seatNumber": "B2",
+                        "status": "available"
+                      },
+                      {
+                        "id": 3,
+                        "seatNumber": "B3",
+                        "status": "available"
+                      },
+                   
+                      {
+                          "id": 4,
+                          "seatNumber": "B4",
+                          "status": "available"
+                        },
+                        {
+                          "id": 5,
+                          "seatNumber": "B5",
+                          "status": "available"
+                        },
+                        {
+                          "id": 6,
+                          "seatNumber": "B6",
+                          "status": "available"
+                        },
+                        {
+                          "id": 7,
+                          "seatNumber": "B7",
+                          "status": "available"
+                        },
+                        {
+                          "id": 8,
+                          "seatNumber": "B8",
+                          "status": "available"
+                        },
+                        {
+                          "id": 9,
+                          "seatNumber": "B9",
+                          "status": "available"
+                        },
+                        {
+                          "id": 10,
+                          "seatNumber": "B10",
+                          "status": "available"
+                        },
+                        {
+                          "id": 11,
+                          "seatNumber": "B11",
+                          "status": "available"
+                        },
+                        {
+                          "id": 12,
+                          "seatNumber": "B12",
+                          "status": "available"
+                        },
+                        {
+                          "id": 13,
+                          "seatNumber": "B13",
+                          "status": "available"
+                        },
+                        {
+                          "id": 14,
+                          "seatNumber": "B14",
+                          "status": "available"
+                        },
+                        {
+                          "id": 15,
+                          "seatNumber": "B15",
+                          "status": "available"
+                        },
+                        {
+                          "id": 16,
+                          "seatNumber": "B16",
+                          "status": "available"
+                        },
+                        {
+                          "id": 17,
+                          "seatNumber": "B17",
+                          "status": "available"
+                        },
+                        {
+                          "id": 18,
+                          "seatNumber": "B18",
+                          "status": "available"
+                        },
+                        {
+                          "id": 19,
+                          "seatNumber": "B19",
+                          "status": "available"
+                        },
+                        {
+                          "id": 20,
+                          "seatNumber": "B20",
+                          "status": "available"
+                        },
+                        {
+                          "id": 21,
+                          "seatNumber": "B21",
+                          "status": "available"
+                        },
+                        {
+                          "id": 22,
+                          "seatNumber": "B22",
+                          "status": "available"
+                        },
+                        {
+                          "id": 23,
+                          "seatNumber": "B23",
+                          "status": "available"
+                        },
+                        {
+                          "id": 24,
+                          "seatNumber": "B24",
+                          "status": "available"
+                        },
+                        {
+                          "id": 25,
+                          "seatNumber": "B25",
+                          "status": "available"
+                        },
+                        {
+                          "id": 26,
+                          "seatNumber": "B26",
+                          "status": "available"
+                        },
+                        {
+                          "id": 27,
+                          "seatNumber": "B27",
+                          "status": "available"
+                        },
+                        {
+                          "id": 28,
+                          "seatNumber": "B28",
+                          "status": "available"
+                        },
+                        {
+                          "id": 29,
+                          "seatNumber": "B29",
+                          "status": "available"
+                        },
+                        {
+                          "id": 30,
+                          "seatNumber": "B30",
+                          "status": "available"
+                        },
+                        {
+                          "id": 31,
+                          "seatNumber": "B31",
+                          "status": "available"
+                        },
+                        {
+                          "id": 32,
+                          "seatNumber": "B32",
+                          "status": "available"
+                        },
+                        {
+                          "id": 33,
+                          "seatNumber": "B33",
+                          "status": "available"
+                        },
+                        {
+                          "id": 34,
+                          "seatNumber": "B34",
+                          "status": "available"
+                        },
+                        {
+                          "id": 35,
+                          "seatNumber": "B35",
+                          "status": "available"
+                        },
+                        {
+                          "id": 36,
+                          "seatNumber": "B36",
+                          "status": "available"
+                        },
+                        {
+                          "id": 37,
+                          "seatNumber": "B37",
+                          "status": "available"
+                        },
+                        {
+                          "id": 38,
+                          "seatNumber": "B38",
+                          "status": "available"
+                        },
+                        {
+                          "id": 39,
+                          "seatNumber": "B39",
+                          "status": "available"
+                        },
+                        {
+                          "id": 40,
+                          "seatNumber": "B41",
+                          "status": "available"
+                        },
+                        {
+                          "id": 41,
+                          "seatNumber": "B11",
+                          "status": "available"
+                        },
+                        {
+                          "id": 42,
+                          "seatNumber": "B42",
+                          "status": "available"
+                        },
+                        {
+                          "id": 43,
+                          "seatNumber": "B43",
+                          "status": "available"
+                        },
+                        {
+                          "id": 44,
+                          "seatNumber": "B44",
+                          "status": "available"
+                        },
+                        {
+                          "id": 45,
+                          "seatNumber": "B45",
+                          "status": "available"
+                        },
+                        {
+                          "id": 46,
+                          "seatNumber": "B46",
+                          "status": "available"
+                        },
+                        {
+                          "id": 47,
+                          "seatNumber": "B47",
+                          "status": "available"
+                        },
+                        {
+                          "id": 48,
+                          "seatNumber": "B48",
+                          "status": "available"
+                        },
+                        {
+                          "id": 49,
+                          "seatNumber": "B49",
+                          "status": "available"
+                        },
+                        {
+                          "id": 50,
+                          "seatNumber": "B50",
+                          "status": "available"
+                        }
+                ]
+              },
+              {
+                "id": 24,
+                "title": "Hero",
+                "genre":"Romance",
+                "rating":4.7,
+                "duration":"2:45 hr",
+                "type":"2D",
+                "des":"Superman is the archetype of the superhero: he wears an outlandish costume, uses a codename, and fights evil with the aid of extraordinary abilities. Although there are earlier characters who arguably fit this definition, it was Superman who popularized the superhero genre and established its conventions.",
+                "image": "https://motivatevalmorgan.com/wp-content/uploads/2018/02/Hero-Tamil-Movie-Poster.jpg",
+                "seats": [
+                    {
+                        "id": 1,
+                        "seatNumber": "A1",
+                        "status": "available"
+                      },
+                      {
+                        "id": 2,
+                        "seatNumber": "A2",
+                        "status": "available"
+                      },
+                      {
+                        "id": 3,
+                        "seatNumber": "A3",
+                        "status": "available"
+                      },
+                      {
+                          "id":4,
+                          "seatNumber":"A4",
+                          "status":"available"
+                      },
+                      {
+                          "id":5,
+                          "seatNumber":"A5",
+                          "status":"available"
+                      },
+                      {
+                          "id":6,
+                          "seatNumber":"A6",
+                          "status":"available"
+                      },
+                      {
+                          "id":7,
+                          "seatNumber":"A7",
+                          "status":"available"
+                      },
+                      {
+                          "id":8,
+                          "seatNumber":"A8",
+                          "status":"available"
+                      },
+                      {
+                          "id":9,
+                          "seatNumber":"A9",
+                          "status":"available"
+                      },
+                      {
+                          "id":10,
+                          "seatNumber":"A10",
+                          "status":"available"
+                      },
+                      {
+                          "id":11,
+                          "seatNumber":"A11",
+                          "status":"available"
+                      },
+                        {
+                          "id":12,
+                          "seatNumber":"A12",
+                          "status":"available"
+                      },
+                      {
+                          "id":13,
+                          "seatNumber":"A13",
+                          "status":"available"
+                      },
+                      {
+                          "id":14,
+                          "seatNumber":"A14",
+                          "status":"available"
+                      },
+                      {
+                          "id":15,
+                          "seatNumber":"A15",
+                          "status":"available"
+                      },
+                      {
+                          "id":16,
+                          "seatNumber":"A16",
+                          "status":"available"
+                      },
+                      {
+                          "id":17,
+                          "seatNumber":"A17",
+                          "status":"available"
+                      },
+                      {
+                          "id":18,
+                          "seatNumber":"A18",
+                          "status":"available"
+                      },
+                      {
+                          "id":19,
+                          "seatNumber":"A19",
+                          "status":"available"
+                      },
+                      {
+                          "id":20,
+                          "seatNumber":"A20",
+                          "status":"available"
+                      },
+                      {
+                          "id":21,
+                          "seatNumber":"A21",
+                          "status":"available"
+                      },
+                      {
+                          "id":22,
+                          "seatNumber":"A22",
+                          "status":"available"
+                      },
+                      {
+                          "id":23,
+                          "seatNumber":"A23",
+                          "status":"available"
+                      },
+                      {
+                          "id":24,
+                          "seatNumber":"A24",
+                          "status":"available"
+                      },
+                      {
+                          "id":25,
+                          "seatNumber":"A25",
+                          "status":"available"
+                      },
+                      {
+                          "id":26,
+                          "seatNumber":"A26",
+                          "status":"available"
+                      },
+                      {
+                          "id":27,
+                          "seatNumber":"A27",
+                          "status":"available"
+                      },
+                      {
+                          "id":28,
+                          "seatNumber":"A28",
+                          "status":"available"
+                      },
+                      {
+                          "id":29,
+                          "seatNumber":"A29",
+                          "status":"available"
+                      },
+                      {
+                          "id":30,
+                          "seatNumber":"A30",
+                          "status":"available"
+                      },   
+                      {
+                          "id":31,
+                          "seatNumber":"A31",
+                          "status":"available"
+                      },
+                      {
+                          "id":32,
+                          "seatNumber":"A32",
+                          "status":"available"
+                      },
+                      {
+                          "id":33,
+                          "seatNumber":"A33",
+                          "status":"available"
+                      },
+                      {
+                          "id":34,
+                          "seatNumber":"A34",
+                          "status":"available"
+                      },
+                      {
+                          "id":35,
+                          "seatNumber":"A35",
+                          "status":"available"
+                      },
+                      {
+                          "id":36,
+                          "seatNumber":"A36",
+                          "status":"available"
+                      },
+                      {
+                          "id":37,
+                          "seatNumber":"A38",
+                          "status":"available"
+                      },
+      
+                      {
+                          "id":38,
+                          "seatNumber":"A38",
+                          "status":"available"
+                      },
+                      {
+                          "id":39,
+                          "seatNumber":"A39",
+                          "status":"available"
+                      },
+                      {
+                          "id":40,
+                          "seatNumber":"A40",
+                          "status":"available"
+                      },
+                      {
+                          "id":41,
+                          "seatNumber":"A41",
+                          "status":"available"
+                      },
+                      {
+                          "id":42,
+                          "seatNumber":"A42",
+                          "status":"available"
+                      },
+                      {
+                          "id":43,
+                          "seatNumber":"A43",
+                          "status":"available"
+                      },
+                      {
+                          "id":44,
+                          "seatNumber":"A44",
+                          "status":"available"
+                      },
+                      {
+                          "id":45,
+                          "seatNumber":"A45",
+                          "status":"available"
+                      },
+                      {
+                          "id":46,
+                          "seatNumber":"A46",
+                          "status":"available"
+                      },
+                      {
+                          "id":47,
+                          "seatNumber":"A47",
+                          "status":"available"
+                      },
+                      {
+                          "id":48,
+                          "seatNumber":"A48",
+                          "status":"available"
+                      },
+                      {
+                          "id":49,
+                          "seatNumber":"A49",
+                          "status":"available"
+                      },
+                      {
+                          "id":50,
+                          "seatNumber":"A50",
+                          "status":"available"
+                      }
+  
+                ]
+              },
+              {
+                "id": 25,
+                "title": "Kanaa",
+                "genre":"Action/Thriller",
+                "rating":2.8,
+                "duration":"2:15 hr",
+                "type":"2D",
+                "des":"Batman was originally introduced as a ruthless vigilante who frequently killed or maimed criminals, but evolved into a character with a stringent moral code and strong sense of justice. Unlike most superheroes, Batman does not possess any superpowers, instead relying on his intellect, fighting skills, and wealth.",
+                "image": "https://m.media-amazon.com/images/M/MV5BYTNmNjlkYzAtYjk1NC00ZDU1LThiZmItZmFiYzU4ZTIxMzM1XkEyXkFqcGdeQXVyMzYxOTQ3MDg@._V1_.jpg",
+                "seats": [
+                  {
+                      "id": 1,
+                      "seatNumber": "B1",
+                      "status": "available"
+                    },
+                    {
+                      "id": 2,
+                      "seatNumber": "B2",
+                      "status": "available"
+                    },
+                    {
+                      "id": 3,
+                      "seatNumber": "B3",
+                      "status": "available"
+                    },
+                 
+                    {
+                        "id": 4,
+                        "seatNumber": "B4",
+                        "status": "available"
+                      },
+                      {
+                        "id": 5,
+                        "seatNumber": "B5",
+                        "status": "available"
+                      },
+                      {
+                        "id": 6,
+                        "seatNumber": "B6",
+                        "status": "available"
+                      },
+                      {
+                        "id": 7,
+                        "seatNumber": "B7",
+                        "status": "available"
+                      },
+                      {
+                        "id": 8,
+                        "seatNumber": "B8",
+                        "status": "available"
+                      },
+                      {
+                        "id": 9,
+                        "seatNumber": "B9",
+                        "status": "available"
+                      },
+                      {
+                        "id": 10,
+                        "seatNumber": "B10",
+                        "status": "available"
+                      },
+                      {
+                        "id": 11,
+                        "seatNumber": "B11",
+                        "status": "available"
+                      },
+                      {
+                        "id": 12,
+                        "seatNumber": "B12",
+                        "status": "available"
+                      },
+                      {
+                        "id": 13,
+                        "seatNumber": "B13",
+                        "status": "available"
+                      },
+                      {
+                        "id": 14,
+                        "seatNumber": "B14",
+                        "status": "available"
+                      },
+                      {
+                        "id": 15,
+                        "seatNumber": "B15",
+                        "status": "available"
+                      },
+                      {
+                        "id": 16,
+                        "seatNumber": "B16",
+                        "status": "available"
+                      },
+                      {
+                        "id": 17,
+                        "seatNumber": "B17",
+                        "status": "available"
+                      },
+                      {
+                        "id": 18,
+                        "seatNumber": "B18",
+                        "status": "available"
+                      },
+                      {
+                        "id": 19,
+                        "seatNumber": "B19",
+                        "status": "available"
+                      },
+                      {
+                        "id": 20,
+                        "seatNumber": "B20",
+                        "status": "available"
+                      },
+                      {
+                        "id": 21,
+                        "seatNumber": "B21",
+                        "status": "available"
+                      },
+                      {
+                        "id": 22,
+                        "seatNumber": "B22",
+                        "status": "available"
+                      },
+                      {
+                        "id": 23,
+                        "seatNumber": "B23",
+                        "status": "available"
+                      },
+                      {
+                        "id": 24,
+                        "seatNumber": "B24",
+                        "status": "available"
+                      },
+                      {
+                        "id": 25,
+                        "seatNumber": "B25",
+                        "status": "available"
+                      },
+                      {
+                        "id": 26,
+                        "seatNumber": "B26",
+                        "status": "available"
+                      },
+                      {
+                        "id": 27,
+                        "seatNumber": "B27",
+                        "status": "available"
+                      },
+                      {
+                        "id": 28,
+                        "seatNumber": "B28",
+                        "status": "available"
+                      },
+                      {
+                        "id": 29,
+                        "seatNumber": "B29",
+                        "status": "available"
+                      },
+                      {
+                        "id": 30,
+                        "seatNumber": "B30",
+                        "status": "available"
+                      },
+                      {
+                        "id": 31,
+                        "seatNumber": "B31",
+                        "status": "available"
+                      },
+                      {
+                        "id": 32,
+                        "seatNumber": "B32",
+                        "status": "available"
+                      },
+                      {
+                        "id": 33,
+                        "seatNumber": "B33",
+                        "status": "available"
+                      },
+                      {
+                        "id": 34,
+                        "seatNumber": "B34",
+                        "status": "available"
+                      },
+                      {
+                        "id": 35,
+                        "seatNumber": "B35",
+                        "status": "available"
+                      },
+                      {
+                        "id": 36,
+                        "seatNumber": "B36",
+                        "status": "available"
+                      },
+                      {
+                        "id": 37,
+                        "seatNumber": "B37",
+                        "status": "available"
+                      },
+                      {
+                        "id": 38,
+                        "seatNumber": "B38",
+                        "status": "available"
+                      },
+                      {
+                        "id": 39,
+                        "seatNumber": "B39",
+                        "status": "available"
+                      },
+                      {
+                        "id": 40,
+                        "seatNumber": "B41",
+                        "status": "available"
+                      },
+                      {
+                        "id": 41,
+                        "seatNumber": "B11",
+                        "status": "available"
+                      },
+                      {
+                        "id": 42,
+                        "seatNumber": "B42",
+                        "status": "available"
+                      },
+                      {
+                        "id": 43,
+                        "seatNumber": "B43",
+                        "status": "available"
+                      },
+                      {
+                        "id": 44,
+                        "seatNumber": "B44",
+                        "status": "available"
+                      },
+                      {
+                        "id": 45,
+                        "seatNumber": "B45",
+                        "status": "available"
+                      },
+                      {
+                        "id": 46,
+                        "seatNumber": "B46",
+                        "status": "available"
+                      },
+                      {
+                        "id": 47,
+                        "seatNumber": "B47",
+                        "status": "available"
+                      },
+                      {
+                        "id": 48,
+                        "seatNumber": "B48",
+                        "status": "available"
+                      },
+                      {
+                        "id": 49,
+                        "seatNumber": "B49",
+                        "status": "available"
+                      },
+                      {
+                        "id": 50,
+                        "seatNumber": "B50",
+                        "status": "available"
+                      }
+              ]
+              },
+              {
+                "id": 26,
+                "title": "Mary Anotony",
+                "genre":"Action",
+                "rating":3.1,
+                "duration":"2:20 hr",
+                "type":"2D",
+                "des":"Wonder Woman is an Amazon, a race of female warriors in Greek mythology. For the purpose of the Wonder Woman character, it was the Greek gods who gave her her powers. These powers include superhuman strength and speed as well as the ability to fly.",
+                "image": "https://www.agscinemas.com/assets/images/movies/HO00001047_cover.jpg",
+                "seats": [
+                    {
+                        "id": 1,
+                        "seatNumber": "B1",
+                        "status": "available"
+                      },
+                      {
+                        "id": 2,
+                        "seatNumber": "B2",
+                        "status": "available"
+                      },
+                      {
+                        "id": 3,
+                        "seatNumber": "B3",
+                        "status": "available"
+                      },
+                   
+                      {
+                          "id": 4,
+                          "seatNumber": "B4",
+                          "status": "available"
+                        },
+                        {
+                          "id": 5,
+                          "seatNumber": "B5",
+                          "status": "available"
+                        },
+                        {
+                          "id": 6,
+                          "seatNumber": "B6",
+                          "status": "available"
+                        },
+                        {
+                          "id": 7,
+                          "seatNumber": "B7",
+                          "status": "available"
+                        },
+                        {
+                          "id": 8,
+                          "seatNumber": "B8",
+                          "status": "available"
+                        },
+                        {
+                          "id": 9,
+                          "seatNumber": "B9",
+                          "status": "available"
+                        },
+                        {
+                          "id": 10,
+                          "seatNumber": "B10",
+                          "status": "available"
+                        },
+                        {
+                          "id": 11,
+                          "seatNumber": "B11",
+                          "status": "available"
+                        },
+                        {
+                          "id": 12,
+                          "seatNumber": "B12",
+                          "status": "available"
+                        },
+                        {
+                          "id": 13,
+                          "seatNumber": "B13",
+                          "status": "available"
+                        },
+                        {
+                          "id": 14,
+                          "seatNumber": "B14",
+                          "status": "available"
+                        },
+                        {
+                          "id": 15,
+                          "seatNumber": "B15",
+                          "status": "available"
+                        },
+                        {
+                          "id": 16,
+                          "seatNumber": "B16",
+                          "status": "available"
+                        },
+                        {
+                          "id": 17,
+                          "seatNumber": "B17",
+                          "status": "available"
+                        },
+                        {
+                          "id": 18,
+                          "seatNumber": "B18",
+                          "status": "available"
+                        },
+                        {
+                          "id": 19,
+                          "seatNumber": "B19",
+                          "status": "available"
+                        },
+                        {
+                          "id": 20,
+                          "seatNumber": "B20",
+                          "status": "available"
+                        },
+                        {
+                          "id": 21,
+                          "seatNumber": "B21",
+                          "status": "available"
+                        },
+                        {
+                          "id": 22,
+                          "seatNumber": "B22",
+                          "status": "available"
+                        },
+                        {
+                          "id": 23,
+                          "seatNumber": "B23",
+                          "status": "available"
+                        },
+                        {
+                          "id": 24,
+                          "seatNumber": "B24",
+                          "status": "available"
+                        },
+                        {
+                          "id": 25,
+                          "seatNumber": "B25",
+                          "status": "available"
+                        },
+                        {
+                          "id": 26,
+                          "seatNumber": "B26",
+                          "status": "available"
+                        },
+                        {
+                          "id": 27,
+                          "seatNumber": "B27",
+                          "status": "available"
+                        },
+                        {
+                          "id": 28,
+                          "seatNumber": "B28",
+                          "status": "available"
+                        },
+                        {
+                          "id": 29,
+                          "seatNumber": "B29",
+                          "status": "available"
+                        },
+                        {
+                          "id": 30,
+                          "seatNumber": "B30",
+                          "status": "available"
+                        },
+                        {
+                          "id": 31,
+                          "seatNumber": "B31",
+                          "status": "available"
+                        },
+                        {
+                          "id": 32,
+                          "seatNumber": "B32",
+                          "status": "available"
+                        },
+                        {
+                          "id": 33,
+                          "seatNumber": "B33",
+                          "status": "available"
+                        },
+                        {
+                          "id": 34,
+                          "seatNumber": "B34",
+                          "status": "available"
+                        },
+                        {
+                          "id": 35,
+                          "seatNumber": "B35",
+                          "status": "available"
+                        },
+                        {
+                          "id": 36,
+                          "seatNumber": "B36",
+                          "status": "available"
+                        },
+                        {
+                          "id": 37,
+                          "seatNumber": "B37",
+                          "status": "available"
+                        },
+                        {
+                          "id": 38,
+                          "seatNumber": "B38",
+                          "status": "available"
+                        },
+                        {
+                          "id": 39,
+                          "seatNumber": "B39",
+                          "status": "available"
+                        },
+                        {
+                          "id": 40,
+                          "seatNumber": "B41",
+                          "status": "available"
+                        },
+                        {
+                          "id": 41,
+                          "seatNumber": "B11",
+                          "status": "available"
+                        },
+                        {
+                          "id": 42,
+                          "seatNumber": "B42",
+                          "status": "available"
+                        },
+                        {
+                          "id": 43,
+                          "seatNumber": "B43",
+                          "status": "available"
+                        },
+                        {
+                          "id": 44,
+                          "seatNumber": "B44",
+                          "status": "available"
+                        },
+                        {
+                          "id": 45,
+                          "seatNumber": "B45",
+                          "status": "available"
+                        },
+                        {
+                          "id": 46,
+                          "seatNumber": "B46",
+                          "status": "available"
+                        },
+                        {
+                          "id": 47,
+                          "seatNumber": "B47",
+                          "status": "available"
+                        },
+                        {
+                          "id": 48,
+                          "seatNumber": "B48",
+                          "status": "available"
+                        },
+                        {
+                          "id": 49,
+                          "seatNumber": "B49",
+                          "status": "available"
+                        },
+                        {
+                          "id": 50,
+                          "seatNumber": "B50",
+                          "status": "available"
+                        }
+                ]
+              },
+              {
+                "id": 27,
+                "title": "Vikaram",
+                "genre":"Storyteller",
+                "rating":4.2,
+                "duration":"2:10 hr",
+                "type":"2D",
+                "des":"Thor (from Old Norse: Þórr) is a prominent god in Germanic paganism. In Norse mythology, he is a hammer-wielding god associated with lightning, thunder, storms, sacred groves and trees, strength, the protection of humankind, hallowing, and fertility.",
+                "image": "https://m.media-amazon.com/images/M/MV5BMDRiOWNjYjUtMDI0ZC00MDMyLTkwZDItNTU5NWQ1NjEyNGYxXkEyXkFqcGdeQXVyMTIyNzY0NTMx._V1_FMjpg_UX1000_.jpg",
+                "seats": [
+                    {
+                        "id": 1,
+                        "seatNumber": "B1",
+                        "status": "available"
+                      },
+                      {
+                        "id": 2,
+                        "seatNumber": "B2",
+                        "status": "available"
+                      },
+                      {
+                        "id": 3,
+                        "seatNumber": "B3",
+                        "status": "available"
+                      },
+                   
+                      {
+                          "id": 4,
+                          "seatNumber": "B4",
+                          "status": "available"
+                        },
+                        {
+                          "id": 5,
+                          "seatNumber": "B5",
+                          "status": "available"
+                        },
+                        {
+                          "id": 6,
+                          "seatNumber": "B6",
+                          "status": "available"
+                        },
+                        {
+                          "id": 7,
+                          "seatNumber": "B7",
+                          "status": "available"
+                        },
+                        {
+                          "id": 8,
+                          "seatNumber": "B8",
+                          "status": "available"
+                        },
+                        {
+                          "id": 9,
+                          "seatNumber": "B9",
+                          "status": "available"
+                        },
+                        {
+                          "id": 10,
+                          "seatNumber": "B10",
+                          "status": "available"
+                        },
+                        {
+                          "id": 11,
+                          "seatNumber": "B11",
+                          "status": "available"
+                        },
+                        {
+                          "id": 12,
+                          "seatNumber": "B12",
+                          "status": "available"
+                        },
+                        {
+                          "id": 13,
+                          "seatNumber": "B13",
+                          "status": "available"
+                        },
+                        {
+                          "id": 14,
+                          "seatNumber": "B14",
+                          "status": "available"
+                        },
+                        {
+                          "id": 15,
+                          "seatNumber": "B15",
+                          "status": "available"
+                        },
+                        {
+                          "id": 16,
+                          "seatNumber": "B16",
+                          "status": "available"
+                        },
+                        {
+                          "id": 17,
+                          "seatNumber": "B17",
+                          "status": "available"
+                        },
+                        {
+                          "id": 18,
+                          "seatNumber": "B18",
+                          "status": "available"
+                        },
+                        {
+                          "id": 19,
+                          "seatNumber": "B19",
+                          "status": "available"
+                        },
+                        {
+                          "id": 20,
+                          "seatNumber": "B20",
+                          "status": "available"
+                        },
+                        {
+                          "id": 21,
+                          "seatNumber": "B21",
+                          "status": "available"
+                        },
+                        {
+                          "id": 22,
+                          "seatNumber": "B22",
+                          "status": "available"
+                        },
+                        {
+                          "id": 23,
+                          "seatNumber": "B23",
+                          "status": "available"
+                        },
+                        {
+                          "id": 24,
+                          "seatNumber": "B24",
+                          "status": "available"
+                        },
+                        {
+                          "id": 25,
+                          "seatNumber": "B25",
+                          "status": "available"
+                        },
+                        {
+                          "id": 26,
+                          "seatNumber": "B26",
+                          "status": "available"
+                        },
+                        {
+                          "id": 27,
+                          "seatNumber": "B27",
+                          "status": "available"
+                        },
+                        {
+                          "id": 28,
+                          "seatNumber": "B28",
+                          "status": "available"
+                        },
+                        {
+                          "id": 29,
+                          "seatNumber": "B29",
+                          "status": "available"
+                        },
+                        {
+                          "id": 30,
+                          "seatNumber": "B30",
+                          "status": "available"
+                        },
+                        {
+                          "id": 31,
+                          "seatNumber": "B31",
+                          "status": "available"
+                        },
+                        {
+                          "id": 32,
+                          "seatNumber": "B32",
+                          "status": "available"
+                        },
+                        {
+                          "id": 33,
+                          "seatNumber": "B33",
+                          "status": "available"
+                        },
+                        {
+                          "id": 34,
+                          "seatNumber": "B34",
+                          "status": "available"
+                        },
+                        {
+                          "id": 35,
+                          "seatNumber": "B35",
+                          "status": "available"
+                        },
+                        {
+                          "id": 36,
+                          "seatNumber": "B36",
+                          "status": "available"
+                        },
+                        {
+                          "id": 37,
+                          "seatNumber": "B37",
+                          "status": "available"
+                        },
+                        {
+                          "id": 38,
+                          "seatNumber": "B38",
+                          "status": "available"
+                        },
+                        {
+                          "id": 39,
+                          "seatNumber": "B39",
+                          "status": "available"
+                        },
+                        {
+                          "id": 40,
+                          "seatNumber": "B41",
+                          "status": "available"
+                        },
+                        {
+                          "id": 41,
+                          "seatNumber": "B11",
+                          "status": "available"
+                        },
+                        {
+                          "id": 42,
+                          "seatNumber": "B42",
+                          "status": "available"
+                        },
+                        {
+                          "id": 43,
+                          "seatNumber": "B43",
+                          "status": "available"
+                        },
+                        {
+                          "id": 44,
+                          "seatNumber": "B44",
+                          "status": "available"
+                        },
+                        {
+                          "id": 45,
+                          "seatNumber": "B45",
+                          "status": "available"
+                        },
+                        {
+                          "id": 46,
+                          "seatNumber": "B46",
+                          "status": "available"
+                        },
+                        {
+                          "id": 47,
+                          "seatNumber": "B47",
+                          "status": "available"
+                        },
+                        {
+                          "id": 48,
+                          "seatNumber": "B48",
+                          "status": "available"
+                        },
+                        {
+                          "id": 49,
+                          "seatNumber": "B49",
+                          "status": "available"
+                        },
+                        {
+                          "id": 50,
+                          "seatNumber": "B50",
+                          "status": "available"
+                        }
+  
+                ]
+              }
+          ]
         }
+
       ]
       

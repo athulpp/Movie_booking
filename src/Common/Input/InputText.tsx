@@ -26,7 +26,7 @@ const InputText = ({
 }: LayoutProps) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  // Use useEffect to focus on the input field when an error occurs
+  
   useEffect(() => {
     if (error && inputRef.current) {
       inputRef.current.focus();
@@ -68,7 +68,6 @@ const InputText = ({
             error={!!error}
             helperText={error?.message || ""}
           />
-   {/* {inputRef&&error.message} */}
         </>
       )}
     />

@@ -30,6 +30,7 @@ const Booking_Screen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+    const [desiredSeatCount, setDesiredSeatCount] = useState(2);
   const [ticketCount, setTicketCount] = useState();
   const [totalTax, setTotalTax] = useState<number>();
   const [total, setTotal] = useState<number>();
@@ -67,7 +68,7 @@ const Booking_Screen = () => {
   const userIsLoggedIn = useSelector(
     (state: any) => state?.userReducer.userIsLoggedIn
   );
-  const movieId = location.state.id;
+  const movieId = location?.state?.id;
   const movieInRedux = useSelector((state: any) => state?.form[`movie_${movieId}`]);
   console.log(movieInRedux,'movie in the redux state');
   
@@ -108,6 +109,46 @@ const Booking_Screen = () => {
       setSelectedSeats([...selectedSeats, seat]);
     }
   };
+  
+  // const handleSeatClick = (seat: any) => {
+  //   console.log(selectedSeats,'full selected seats');
+  //   const isSeatBooked = movieInRedux?.seats?.some(
+  //     (s: any) => s.id === seat.id && s.status === "booked"
+  //   );
+  
+  //   if (isSeatBooked) {
+  //     console.log(`Seat ${seat.seatNumber} is already booked.`);
+  //     return;
+  //   }
+  
+  //   const isSelected = selectedSeats.some((selectedSeat) => selectedSeat.id === seat.id);
+  
+  //   if (isSelected) {
+  //     // If the seat is selected, remove it from selectedSeats
+  //     const updatedSelectedSeats = selectedSeats.filter(
+  //       (selectedSeat) => selectedSeat.id !== seat.id
+  //     );
+  //     setSelectedSeats(updatedSelectedSeats);
+  //   } else {
+  //     // Check if the seat and consecutive desired seats are available
+  //     const seatIndex = location.state.seats.findIndex((s: any) => s.id === seat.id);
+  //     const consecutiveAvailableSeats:any = [seat];
+  
+  //     for (let i = 1; i < desiredSeatCount; i++) {
+  //       const nextSeat = location.state.seats[seatIndex + i];
+  //       if (nextSeat && !selectedSeats.some((selectedSeat) => selectedSeat.id === nextSeat.id)) {
+  //         consecutiveAvailableSeats.push(nextSeat);
+  //       } else {
+  //         console.log(`Seat ${nextSeat.seatNumber} is already selected.`);
+  //         return;
+  //       }
+  //     }
+  
+  //     // If all consecutive seats are available, add them to selectedSeats
+  //     setSelectedSeats(consecutiveAvailableSeats);
+  //   }
+  // };
+  
 
   const handleBooking = () => {
 
@@ -195,12 +236,12 @@ const Booking_Screen = () => {
                 } ${
                   selectedSeats.some(
                     (selectedSeat) =>
-                      selectedSeat.status === "booked" &&
+                      selectedSeat.status === "booked"&&
                       selectedSeat.id === seat.id
                   )
                     ? "seat-book-back1"
                     : ""
-                }`}
+                } `}
               >
                 {seat.seatNumber}
               </Box>

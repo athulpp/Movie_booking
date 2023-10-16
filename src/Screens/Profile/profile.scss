@@ -26,6 +26,7 @@
 
   /* ImageWithText.css */
 
+  /*======================================= bill screen is style======================================== */
 .bill-container {
     // padding-left: 10rem;
     border-radius: 20px;
@@ -71,4 +72,8 @@
    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+  .bill_container_border{
+    border :2px solid #ccc !important;
+    border-radius: 1rem !important;
   }

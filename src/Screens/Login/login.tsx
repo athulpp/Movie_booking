@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import "./login.scss";
 import InputText from "../../Common/Input/InputText";
@@ -9,10 +9,20 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import movie1 from '../../Assests/image/3I9xJ0Mrmv.gif'
 import { loginUser, setFormData } from "../../Redux/actions";
+import logo1 from "../../Assests/image/Logo/logo1.jpg";
+import logo2 from "../../Assests/image/Logo/logo 2.png";
+import logo3 from "../../Assests/image/Logo/logo3.png";
+import logo4 from "../../Assests/image/Logo/logo 4.jpg";
+import logo5 from "../../Assests/image/Logo/logo 5.png";
+import logo6 from "../../Assests/image/Logo/logo 6.png";
 const Login = () => {
   const userIsLoggedIn = useSelector((state:any) => state?.userReducer.userIsLoggedIn);
   console.log(userIsLoggedIn,'hhhhh')
   const dispatch = useDispatch();
+  const [userError,setUserError]=useState(false);
+  const advertismentArray=[
+    logo1,logo2,logo3,logo4,logo5,logo6
+      ]
 const navigate=useNavigate();
   const {
     control,
@@ -48,6 +58,8 @@ const navigate=useNavigate();
       dispatch(loginUser());
       navigate('/home');
       dispatch(setFormData('user',user));
+    }else{
+      setUserError(true);
     }
     
   
@@ -71,11 +83,25 @@ const navigate=useNavigate();
         <Box>
           <Typography className="font_ShopName">Cinema Gate</Typography>
         </Box>
+        <Grid className="content-height"></Grid>
+        <Grid className="content-height"></Grid>
+        <Grid className="content-height"></Grid>
+        <Grid className="content-height"></Grid>  
+        <Typography className="content-row font_subHeader_bold" style={{color:"white"}}>
+        Our Partners
+      </Typography>
+      <Grid className="content-height"></Grid>
+        <Grid className="content-row" container spacing={2}>
+      {advertismentArray.map((image, index) => (
+        <Grid item xs={2} sm={2} md={2} lg={2} key={index} className="centered-image-container" >
+          <img src={image} height={50} width={50} alt={`Image ${index + 1}`}  />
+        </Grid>
+      ))}
+    </Grid>
       </Grid>
       {/* Right side */}
       <Grid item xs={12} md={6}>
         <Box className="login_background" sx={{
-          // backgroundColor: "#c7ddcc",
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
@@ -83,7 +109,7 @@ const navigate=useNavigate();
         }}>
         
           <Paper elevation={4} sx={{ width: "80%", maxWidth: 300, padding: 2, backgroundColor: '#ea8a81' }}>
-            <Typography variant="h5" component="div" gutterBottom>
+            <Typography className="font_subHeader_bold" component="div" gutterBottom>
             The screen is awaiting LOGIN
             </Typography>
             <form onSubmit={handleSubmit}>
@@ -118,6 +144,10 @@ const navigate=useNavigate();
                     customStyle={{ backgroundColor: 'red', color: 'white' }}
                   />
                 </Grid>
+                <Grid className="content-height"></Grid>
+                {userError? <Grid xs={12} className="content-row">
+                  <Typography className="font_subHeader_bold">Login Credentials Invalid</Typography>
+                </Grid>:<Grid></Grid>}
               </Grid>
             </form>
             <Box mt={2}></Box>
