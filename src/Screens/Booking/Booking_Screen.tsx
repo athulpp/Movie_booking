@@ -20,6 +20,12 @@ import ButtonComp from "../../Common/Input/Button";
 import Footer from "../../Common/Footer";
 import { calculateGST } from "../../Common/TaxCalcualtor";
 import { getCurrentDateTime } from "../../Common/date_conversion";
+import logo1 from "../../Assests/image/Logo/logo1.jpg";
+import logo2 from "../../Assests/image/Logo/logo 2.png";
+import logo3 from "../../Assests/image/Logo/logo3.png";
+import logo4 from "../../Assests/image/Logo/logo 4.jpg";
+import logo5 from "../../Assests/image/Logo/logo 5.png";
+import logo6 from "../../Assests/image/Logo/logo 6.png";
 interface bookData {
   id: any;
   seatNumber: any;
@@ -27,6 +33,9 @@ interface bookData {
 }
 
 const Booking_Screen = () => {
+  const advertismentArray=[
+    logo1,logo2,logo3,logo4,logo5,logo6
+      ]
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -109,7 +118,7 @@ const Booking_Screen = () => {
       setSelectedSeats([...selectedSeats, seat]);
     }
   };
-  
+
   // const handleSeatClick = (seat: any) => {
   //   console.log(selectedSeats,'full selected seats');
   //   const isSeatBooked = movieInRedux?.seats?.some(
@@ -204,19 +213,19 @@ const Booking_Screen = () => {
   };
 
   return (
-    <Grid>
+    <Grid className="page_background">
       <Grid>
         <Header />
         <Grid className="content-height"></Grid>
-        <Grid container xs={12} className="content-row book_screen_full">
+        <Grid container xs={12} className="book_screen_full">
           <Grid item xs={12} sm={12} md={12} className="booking_margin">
-            <Typography className="font_header">
+            <Typography className="font_header font_white">
               {location?.state?.title}
             </Typography>
             <Grid className="content-height"></Grid>
             <img src={location?.state?.image} height={250} width={200} />
             <Grid className="content-height"></Grid>
-            <Typography className="font_regular_12px">
+            <Typography className="font_regular_12px font_white">
               screen is here
             </Typography>
           </Grid>
@@ -259,7 +268,16 @@ const Booking_Screen = () => {
           customStyle={{ backgroundColor: "red", color: "white" }}
         />
       </Grid>
-      <Grid className="container-height container_bottom_padding"></Grid>
+      <Grid className="content-height"></Grid>
+      <Grid className="content-row" container spacing={2}>
+      {advertismentArray.map((image, index) => (
+        <Grid item xs={2} sm={2} md={2} lg={2} key={index} className="centered-image-container" >
+          <img className="sponsor_image" src={image} alt={`Image ${index + 1}`}  />
+        </Grid>
+      ))}
+    </Grid>
+      <Grid className="content-height"></Grid>
+      {/* <Grid className="container-height container_bottom_padding"></Grid> */}
       <Footer />
       <Dialog
         className="centered-dialog"

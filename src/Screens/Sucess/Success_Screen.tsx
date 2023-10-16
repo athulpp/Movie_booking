@@ -8,6 +8,13 @@ import { useNavigate } from "react-router-dom";
 import ButtonComp from "../../Common/Input/Button";
 import { saveAs } from "file-saver";
 import jsPDF from "jspdf";
+import logo1 from "../../Assests/image/Logo/logo1.jpg";
+import logo2 from "../../Assests/image/Logo/logo 2.png";
+import logo3 from "../../Assests/image/Logo/logo3.png";
+import logo4 from "../../Assests/image/Logo/logo 4.jpg";
+import logo5 from "../../Assests/image/Logo/logo 5.png";
+import logo6 from "../../Assests/image/Logo/logo 6.png";
+import Footer from "../../Common/Footer";
 
 const Sucess_screen = () => {
   const navigate = useNavigate();
@@ -19,6 +26,9 @@ const Sucess_screen = () => {
   const userIsLoggedIn = useSelector(
     (state: any) => state?.userReducer.userIsLoggedIn
   );
+  const advertismentArray=[
+    logo1,logo2,logo3,logo4,logo5,logo6
+      ];
   useEffect(()=>{
     if(!userIsLoggedIn){
       navigate('/');
@@ -101,6 +111,20 @@ const Sucess_screen = () => {
             </Grid>
           </Grid>
         </Grid>
+        <Grid className="content-height"></Grid>
+      <Typography className="content-row font_subHeader_bold home-pad-left" variant="h5">
+        Our Partners
+      </Typography>
+      <Grid className="content-height"></Grid>
+      <Grid className="content-row" container spacing={2}>
+      {advertismentArray.map((image, index) => (
+        <Grid item xs={2} sm={2} md={2} lg={2} key={index} className="centered-image-container" >
+          <img className="sponsor_image" src={image} alt={`Image ${index + 1}`}  />
+        </Grid>
+      ))}
+    </Grid>
+      <Grid className="content-height"></Grid>
+      <Footer />
       </Grid>
     </div>
   );

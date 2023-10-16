@@ -82,16 +82,16 @@ const Header = () => {
               <>
                 <Grid item xs={0} sm={4}>
                   <Typography
-                    className="content-left-padding underline-on-hover"
+                    className="content-left-padding underline-on-hover font_header"
                     variant="h5"
                     onClick={() => navigate('/profile')}
                   >
-                    {`Hello ${userDetails?.name}`}
+                    {`Hello, ${userDetails?.name}!`}
                   </Typography>
-                  
+
                 </Grid>
                 <Grid item xs={0} sm={1}>
-                  <Button color="inherit" onClick={Logout}>
+                  <Button className='font_regular_12px' color="inherit" onClick={Logout}>
                     Logout
                   </Button>
                 </Grid>

@@ -9,8 +9,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { setFormData } from "../../Redux/actions";
 import { formatDate, formatTime } from "../../Common/date_conversion";
 import empty from "../../Assests/image/techny-empty-clipboard.png";
-
+import logo1 from "../../Assests/image/Logo/logo1.jpg";
+import logo2 from "../../Assests/image/Logo/logo 2.png";
+import logo3 from "../../Assests/image/Logo/logo3.png";
+import logo4 from "../../Assests/image/Logo/logo 4.jpg";
+import logo5 from "../../Assests/image/Logo/logo 5.png";
+import logo6 from "../../Assests/image/Logo/logo 6.png";
 const Booke_show = () => {
+    const advertismentArray=[
+    logo1,logo2,logo3,logo4,logo5,logo6
+      ];
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const bookList = useSelector((state: any) => state?.bookedList.dataArray);
@@ -49,7 +57,7 @@ const Booke_show = () => {
   };
 
   return (
-    <div>
+    <div className="page_background"> 
       <Header />
       <Grid className="content-height"></Grid>
       <Typography variant="h4" className="content-row font_header">
@@ -64,7 +72,8 @@ const Booke_show = () => {
           sm={6}
           md={4}
           lg={3}
-          sx={{ border: "2px solid #ccc", borderRadius: "10px" }}
+          className="bill_container_border"
+          // sx={{ border: "2px solid #ccc", borderRadius: "10px" }}
         >
           <div className="centered-image-container">
             <img src={userDetails?.image} height={100} width={100} alt="User" />
@@ -221,7 +230,19 @@ const Booke_show = () => {
           <Grid className="content-height"></Grid>
         </>
       )}
-
+ <Grid className="content-height"></Grid>
+      <Typography className="content-row font_subHeader_bold home-pad-left" variant="h5">
+        Our Partners
+      </Typography>
+      <Grid className="content-height"></Grid>
+      <Grid className="content-row" container spacing={2}>
+      {advertismentArray.map((image, index) => (
+        <Grid item xs={2} sm={2} md={2} lg={2} key={index} className="centered-image-container" >
+          <img className="sponsor_image" src={image} alt={`Image ${index + 1}`}  />
+        </Grid>
+      ))}
+    </Grid>
+      <Grid className="content-height"></Grid>
       <Footer />
     </div>
   );

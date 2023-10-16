@@ -43,7 +43,7 @@ const HomeScreen = () => {
 logo1,logo2,logo3,logo4,logo5,logo6
   ]
   return (
-    <div style={{ backgroundColor: "#ECF2FF" }}>
+    <div className="page_background">
       <Header />
       <Grid className="content-height"></Grid>
       <CustomCarousel />
@@ -105,15 +105,14 @@ logo1,logo2,logo3,logo4,logo5,logo6
         </Grid>
       </Grid>
       <Grid className="content-height"></Grid>
-      <Typography className="content-row font_subHeader_bold" variant="h5">
+      <Typography className="content-row font_subHeader_bold home-pad-left" variant="h5">
         Our Partners
       </Typography>
       <Grid className="content-height"></Grid>
-      {/* <Grid xs={12} sm={12} md={12}> */}
       <Grid className="content-row" container spacing={2}>
       {advertismentArray.map((image, index) => (
         <Grid item xs={2} sm={2} md={2} lg={2} key={index} className="centered-image-container" >
-          <img src={image} height={50} width={50} alt={`Image ${index + 1}`}  />
+          <img className="sponsor_image" src={image} alt={`Image ${index + 1}`}  />
         </Grid>
       ))}
     </Grid>

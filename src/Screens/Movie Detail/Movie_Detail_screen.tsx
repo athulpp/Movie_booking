@@ -7,6 +7,12 @@ import "./movie.scss";
 import { useNavigate, useLocation } from "react-router-dom";
 import ButtonComp from "../../Common/Input/Button";
 import { setFormData } from "../../Redux/actions";
+import logo1 from "../../Assests/image/Logo/logo1.jpg";
+import logo2 from "../../Assests/image/Logo/logo 2.png";
+import logo3 from "../../Assests/image/Logo/logo3.png";
+import logo4 from "../../Assests/image/Logo/logo 4.jpg";
+import logo5 from "../../Assests/image/Logo/logo 5.png";
+import logo6 from "../../Assests/image/Logo/logo 6.png";
 
 const Movie_Detail_screen = () => {
   const userIsLoggedIn = useSelector(
@@ -29,8 +35,11 @@ const Movie_Detail_screen = () => {
   const navigateToBooking = () => {
     navigate("/seatbook", { state: location.state });
   };
+  const advertismentArray=[
+    logo1,logo2,logo3,logo4,logo5,logo6
+      ]
   return (
-    <Grid >
+    <Grid className="page_background" >
       <Header />
       <Grid className="content-height"></Grid>
       <Grid
@@ -119,7 +128,15 @@ const Movie_Detail_screen = () => {
       <Grid xs={12} sm={12} className="movie_description_list font_regular_12px">
         <Typography >{movieData?.des}</Typography>
       </Grid>
-
+      <Grid className="content-height"></Grid>
+      <Grid className="content-row" container spacing={2}>
+      {advertismentArray.map((image, index) => (
+        <Grid item xs={2} sm={2} md={2} lg={2} key={index} className="centered-image-container" >
+          <img className="sponsor_image" src={image} alt={`Image ${index + 1}`}  />
+        </Grid>
+      ))}
+    </Grid>
+      <Grid className="content-height"></Grid>
       <Grid className="container-height"></Grid>
       <Footer />
     </Grid>

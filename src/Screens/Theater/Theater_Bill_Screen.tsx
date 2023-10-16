@@ -30,7 +30,7 @@ if(!userIsLoggedIn){
   },[]);
 
   return (
-    <div>
+    <div className="page_background">
       <Header />
       <Grid className="content-height"></Grid>
       <Grid container xs={12} sm={12} md={12} className="profile_margin">
@@ -41,7 +41,7 @@ if(!userIsLoggedIn){
           sm={6}
           md={4}
           lg={3}
-          className="bill_container_border"
+          className="bill_container_border "
         >
           <Typography className="centered-image-container font_header" >
             About Theatre
@@ -181,7 +181,7 @@ if(!userIsLoggedIn){
       <Grid className="content-row" container spacing={2}>
       {advertismentArray.map((image, index) => (
         <Grid item xs={2} sm={2} md={2} lg={2} key={index} className="centered-image-container" >
-          <img src={image} height={50} width={50} alt={`Image ${index + 1}`}  />
+          <img className="sponsor_image" src={image} alt={`Image ${index + 1}`}  />
         </Grid>
       ))}
     </Grid>
