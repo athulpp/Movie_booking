@@ -77,7 +77,7 @@ const Sucess_screen = () => {
   };
 
   return (
-    <div>
+    <div className="page_background">
       <Grid>
         <Header />
         <Grid className="content-height"></Grid>
@@ -87,7 +87,8 @@ const Sucess_screen = () => {
           alignItems="center"
           style={{ minHeight: "80vh" }}
         >
-          <Grid item xs={12} className="success_center">
+          <Grid item xs={6} className="success_center bill_container_border">
+            <Grid className="content-height"></Grid>
             <Typography variant="h4">
               Success Your Ticket has been booked!
             </Typography>
@@ -109,6 +110,7 @@ const Sucess_screen = () => {
                 customStyle={{ backgroundColor: "yellow", color: "black" }}
               />
             </Grid>
+            <Grid className="content-height"></Grid>
           </Grid>
         </Grid>
         <Grid className="content-height"></Grid>

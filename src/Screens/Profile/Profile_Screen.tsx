@@ -73,7 +73,6 @@ const Booke_show = () => {
           md={4}
           lg={3}
           className="bill_container_border"
-          // sx={{ border: "2px solid #ccc", borderRadius: "10px" }}
         >
           <div className="centered-image-container">
             <img src={userDetails?.image} height={100} width={100} alt="User" />

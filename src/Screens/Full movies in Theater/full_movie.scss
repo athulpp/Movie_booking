@@ -1,0 +1,66 @@
+.theatre-wrap {
+    padding-left: 8rem;
+    padding-top: 1rem;
+    padding-right: 4rem;
+    padding-bottom: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.theatre-wrap .item {
+    flex-basis: calc(35.33% - 1.2rem);
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+@media (min-width: 400px) and (max-width: 800px) {
+    .theatre-wrap {
+        padding-left: 1.5rem;
+        padding-top: 1.1rem;
+        padding-right: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+    }
+
+    .theatre-wrap .item {
+        flex-basis: calc(50% - 0.8rem) !important; /* Adjust as needed based on your spacing requirements */
+        height: 200px;
+        max-width: 150px;
+        background-color: #ddd;
+        margin-right: 0.8rem;
+        margin-bottom: 1.0rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .theatre-wrap {
+        padding-left: 1.2rem;
+        padding-top: 1.1rem;
+        padding-right: 1.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+    }
+
+    .theatre-wrap .item {
+        flex-basis: calc(50% - 0.8rem) !important; /* Adjust as needed based on your spacing requirements */
+        height: 200px;
+        max-width: 8rem;
+        background-color: #ddd;
+        margin-right: 0.8rem;
+        margin-bottom: 1.0rem;
+    }
+}
+
+.theatre-wrap .item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}

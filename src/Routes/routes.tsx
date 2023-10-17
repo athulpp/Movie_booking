@@ -8,6 +8,7 @@ import Booking_Screen from '../Screens/Booking/Booking_Screen';
 import Sucess_screen from '../Screens/Sucess/Success_Screen';
 import Booke_show from '../Screens/Profile/Profile_Screen';
 import Theater_Bill_Screen from '../Screens/Theater/Theater_Bill_Screen';
+import Theatre_Full_movie from '../Screens/Full movies in Theater/Theatre_Full_movie';
 
 const Approutes = () => {
   return (
@@ -20,6 +21,7 @@ const Approutes = () => {
       <Route path='/success' element={<Sucess_screen/>}/>
       <Route path='/profile' element={<Booke_show/>}/>
       <Route path='/storebill' element={<Theater_Bill_Screen/>}/>
+      <Route path='/allmovies'element={<Theatre_Full_movie/>}/>
     </Routes>
     </BrowserRouter>
   )
