@@ -22,8 +22,6 @@ const Booke_show = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const bookList = useSelector((state: any) => state?.bookedList.dataArray);
-  // const bookList = [...originalBookList].slice().reverse();
-  console.log("bool", bookList);
   const userDetails = useSelector((state: any) => state?.form.user);
   const userIsLoggedIn = useSelector(
     (state: any) => state?.userReducer.userIsLoggedIn
@@ -51,7 +49,6 @@ const Booke_show = () => {
   };
 
   const navigateDetails = (data: any) => {
-    // console.log(data,'vvvvvvvvvvv');
     navigate("/storebill", { state: data });
     dispatch(setFormData("theatreBill", data));
   };

@@ -45,8 +45,6 @@ const Booking_Screen = () => {
   const [total, setTotal] = useState<number>();
   const userDetails = useSelector((state: any) => state?.form.user);
   const theaterDetails = useSelector((state: any) => state?.form.theatre);
-  console.log(theaterDetails, "theaterDetails ==========");
-  console.log(userDetails, "userDetails is here");
   const handleOpen = () => {
     let count: any = 0;
     selectedSeats.map((item: any) => {
@@ -54,7 +52,6 @@ const Booking_Screen = () => {
         count++;
       }
     });
-    console.log(count, "count is ");
     calculateTax(count);
     setTicketCount(count);
 
@@ -79,7 +76,6 @@ const Booking_Screen = () => {
   );
   const movieId = location?.state?.id;
   const movieInRedux = useSelector((state: any) => state?.form[`movie_${movieId}`]);
-  console.log(movieInRedux,'movie in the redux state');
   
   useEffect(() => {
     if (!userIsLoggedIn) {
@@ -88,7 +84,6 @@ const Booking_Screen = () => {
     if(movieInRedux){
       const bookedSeats=movieInRedux.seats.filter((seat:any)=>seat.status=='booked');
       setSelectedSeats(bookedSeats);
-      console.log(bookedSeats,'booked seats check first');
     }
   }, [location?.state?.id]);
 
@@ -98,10 +93,9 @@ const Booking_Screen = () => {
     );
 
     if (isSeatBooked) {
-      console.log(`Seat ${seat.seatNumber} is already booked.`);
+      // console.log(`Seat ${seat.seatNumber} is already booked.`);
       return;
     }
-    console.log(seat.status, "check the seat status");
     // Check if the seat is currently selected
     const isSelected = selectedSeats.some(
       (selectedSeat) => selectedSeat.id === seat.id
@@ -172,9 +166,9 @@ const Booking_Screen = () => {
           seat.status = "booked";
         }
       });
-      console.log(selectedSeats, "selected seats ......");
+
     } else {
-      console.log("first time booking is here");
+      //first time booking is here
       updatedMovieData.seats.forEach((seat: any) => {
         const updatedSeat = selectedSeats.find(
           (selectedSeat) => selectedSeat.id === seat.id
@@ -188,7 +182,6 @@ const Booking_Screen = () => {
     }
     dispatch(setFormData(`movie_${movieId}`,updatedMovieData))
     const selectedElements = selectedSeats.slice(-ticketCount!);
-    console.log(selectedElements, "selected Elements");
     const filmList = {
       seats: selectedElements,
       movie: location.state.title,
@@ -202,9 +195,6 @@ const Booking_Screen = () => {
     };
     dispatch(addData(userDetails.id, filmList));
     dispatch(setFormData("booked", filmList));
-
-    // Log the selected seats (you can replace this with your actual booking logic)
-    console.log("Selected Seats:", selectedSeats);
     navigate("/success");
   };
 

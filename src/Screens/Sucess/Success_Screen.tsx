@@ -22,7 +22,6 @@ const Sucess_screen = () => {
   const currentBookedList = useSelector((state: any) => state?.form?.movie);
   const bookedSeats = useSelector((state: any) => state?.form.booked);
   const jsonString = JSON.stringify(bookList);
-  console.log(jsonString, "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
   const userIsLoggedIn = useSelector(
     (state: any) => state?.userReducer.userIsLoggedIn
   );

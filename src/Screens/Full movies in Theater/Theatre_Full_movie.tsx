@@ -17,9 +17,9 @@ const Theatre_Full_movie = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location.state, "ethiya..........");
+
   const onClickMovie = (data: any) => {
-    console.log(data, "selected film");
+
 
     dispatch(setFormData("movie", data));
     dispatch(setFormData("theatre", location.state));

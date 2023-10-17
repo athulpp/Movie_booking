@@ -291,6 +291,21 @@
   background-color: #0056b3 !important;
 }
 
+@media (max-width:600px) {
+  .custom-button{
+    margin-left:0.1rem !important;
+    background-color:  #F5DEB3 !important;
+    color: #fff !important; 
+    border: none !important;
+    padding:5px 2px !important;
+    cursor: pointer !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s !important;
+    font-size: 10px !important;
+  }
+
+}
+
 .page_background{
   background-color: #ECF2FF;
   width: 100%; 

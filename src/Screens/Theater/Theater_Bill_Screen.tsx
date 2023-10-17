@@ -18,7 +18,6 @@ const Theater_Bill_Screen = () => {
     const navigate=useNavigate();
 
   const location = useLocation();
-  console.log(location.state, "here the data is getting is here");
   const userIsLoggedIn = useSelector(
     (state: any) => state?.userReducer.userIsLoggedIn
   );

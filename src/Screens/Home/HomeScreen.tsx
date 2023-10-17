@@ -30,8 +30,6 @@ const HomeScreen = () => {
   }, []);
 
   const onClickMovie = (data: any, data2: any) => {
-    console.log(data, "selected film");
-
     dispatch(setFormData("movie", data));
     dispatch(setFormData("theatre", data2));
     navigate("/moviedes", { state: data });
@@ -42,8 +40,6 @@ const HomeScreen = () => {
   };
 
   const viewAll=(index:any,data:any)=>{
-console.log(index,'check');
-console.log(data,'data check');
     navigate('/allMovies',{state:data});
   }
   const advertismentArray = [logo1, logo2, logo3, logo4, logo5, logo6];
@@ -64,7 +60,7 @@ console.log(data,'data check');
         <Grid className="content-height"></Grid>
         {theaterData.map((item,index) => (
           <div key={item.id}>
-            <Grid className="content-row space_between">
+            <Grid className="content-row space_between home-pad-left">
               <Typography className="font_header">
                 {item.name}
               </Typography>

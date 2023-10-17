@@ -1,6 +1,5 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, Grid, Box } from '@mui/material';
-import logo from '../Assests/image/3I9xJ0Mrmv.gif'
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import { Link } from 'react-router-dom';
 const Footer = () => {

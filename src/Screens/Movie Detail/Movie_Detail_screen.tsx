@@ -29,8 +29,7 @@ const Movie_Detail_screen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const movieData = useSelector((state: any) => state?.form.movie);
-  //  const seatData=useSelector((state:any)=>state?.form.movieData?.title);
-  console.log(movieData, "getting movie data here");
+
 
   const navigateToBooking = () => {
     navigate("/seatbook", { state: location.state });
