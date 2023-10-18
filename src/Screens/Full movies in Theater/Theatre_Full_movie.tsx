@@ -35,10 +35,10 @@ const Theatre_Full_movie = () => {
       }
       window.scrollTo(0, 0);
   },[])
+  
   return (
     <div className="page_background">
-      <Header />
-
+      <Header/>
       <Grid style={{ backgroundColor: "#343434" }}>
         <Grid className="content-height"></Grid>
         <Grid>
@@ -49,7 +49,7 @@ const Theatre_Full_movie = () => {
           <Grid className="centered-image-container">
             <img
               src={location.state?.image}
-              style={{ maxWidth: "100%", height: "auto", borderRadius: "40px" }}
+              style={{ maxWidth: "100%", height: "90%", borderRadius: "20px" }}
               alt="theatre"
             />
           </Grid>
@@ -66,7 +66,7 @@ const Theatre_Full_movie = () => {
       <Grid className="content-height"></Grid>
       <div className="theatre-wrap ">
         {location?.state?.films.map((film: any) => (
-          <div key={film?.id} className="select">
+          <div key={film?.id} className="select centered-image-container" style={{paddingBottom:"2rem"}}>
             <div onClick={() => onClickMovie(film)}>
               <img
                 className="item"
@@ -86,6 +86,14 @@ const Theatre_Full_movie = () => {
           </div>
         ))}
       </div>
+      <Grid className="content-height"></Grid>
+      <Typography
+        className="content-row font_subHeader_bold home-pad-left"
+        variant="h5"
+      >
+        Our Partners
+      </Typography>
+      <Grid className="content-height"></Grid>
       <Grid className="content-row" container spacing={2}>
         {advertismentArray.map((image, index) => (
           <Grid

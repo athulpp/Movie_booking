@@ -19,30 +19,30 @@ const Footer = () => {
     <Container maxWidth="lg">
       <Grid container spacing={5}>
         <Grid item xs={12} sm={4}>
-          <Typography variant="h6" color="text.primary" gutterBottom>
+          <Typography  color="text.primary" gutterBottom className='font_subHeader_bold'>
             About Us
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography  color="text.secondary" className='font_regular_12px'>
             We are Cinema Gate company, dedicated to providing the best visual and sound experiences to our
             customers.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Typography variant="h6" color="text.primary" gutterBottom>
+          <Typography className='font_subHeader_bold' color="text.primary" gutterBottom>
             Contact Us
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography className='font_regular_12px' color="text.secondary">
             Padanappalam, Near Passport Seva center,Kannur 670002
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography className='font_regular_12px' color="text.secondary">
             Email: CinemaGateOffical@cinemagate.com
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography className='font_regular_12px' color="text.secondary">
             Phone: +0497 -2567856
           </Typography>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Typography variant="h6" color="text.primary" gutterBottom>
+          <Typography className='font_subHeader_bold' color="text.primary" gutterBottom>
             Follow Us
           </Typography>
           <Link to={''}  color="inherit">
